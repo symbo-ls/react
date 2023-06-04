@@ -6,6 +6,6 @@ Run:
 ```
 yarn
 ln -s path/to/domql/smbls/components ./domql-smbls-components
-yarn kalduna
+bash ./generate.sh
 yarn start
 ```
