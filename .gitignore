@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.smbls_convert_tmp/
+.parcel-cache/
+domql-smbls-components
+src/uikit/

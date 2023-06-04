@@ -1,0 +1,22 @@
+{
+  "name": "component-wall",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Nikoloz Otiashvili",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "kalduna": "bash ./generate.sh ./domql-smbls-components"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "parcel": "^2.9.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@emotion/babel-plugin": "^11.11.0",
+    "process": "^0.11.10"
+  }
+}
