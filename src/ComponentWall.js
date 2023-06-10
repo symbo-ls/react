@@ -4,6 +4,7 @@ import * as Atoms from './uikit/Atoms'
 import image from './test-img.jpg'
 
 import { Button } from './uikit/Button'
+import svg from './bell.svg'
 
 export default function ComponentWall(props) {
 
@@ -16,8 +17,10 @@ export default function ComponentWall(props) {
           title={'Cheers!'} />
       </Brick>
 
-      <Brick title={"Atoms.Button"}>
-        <Button>Click me!</Button>
+      <Brick title={"Button"}>
+        <Button icon={svg}>
+          Click me!
+        </Button>
       </Brick>
 
     </div>
