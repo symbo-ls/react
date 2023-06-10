@@ -1,19 +1,25 @@
 import * as React from 'react'
-import { Img } from './uikit/Atoms'
-// import { Button } from './uikit/Button'
+import { Brick, BrickTitle } from './Brick'
+import * as Atoms from './uikit/Atoms'
+import image from './test-img.jpg'
+
+import { Button } from './uikit/Button'
 
 export default function ComponentWall(props) {
 
   return (
     <div>
-      <Img
-        src={'./test-img.jpg'}
-        alt={'Guy with long hair and wine in hand cheering'}
-        title={'Cheers!'} />
-{/*      <Button>
-        Click me
-      </Button> */}
-      {props.text}
+      <Brick title={"Atoms.Img"}>
+        <Atoms.Img
+          src={image}
+          alt={'Guy with long hair and wine in hand cheering'}
+          title={'Cheers!'} />
+      </Brick>
+
+      <Brick title={"Atoms.Button"}>
+        <Button>Click me!</Button>
+      </Brick>
+
     </div>
   )
 }
