@@ -18,9 +18,11 @@ export default function ComponentWall(props) {
       </Brick>
 
       <Brick title={"Button"}>
-        <Button icon={svg}>
-          Click me!
-        </Button>
+        <Button 
+          name={"my-button"}
+          icon={svg}
+          text={"Click me!"}
+          onClick={(ev) => console.log("aaaaaaa")} />
       </Brick>
 
     </div>

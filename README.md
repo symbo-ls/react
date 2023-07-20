@@ -19,10 +19,9 @@ Run:
   yarn start
   ```
 
-
-## Can't find `domql-to-mitosis`
+## Can't find `kalduna`
 If running `yarn kalduna` gives an error saying it can't find the
-`domql-to-mitosis` dependency, you must link it manually:
+`kalduna` dependency, you must link it manually:
 ```
-yarn link domql-to-mitosis
+yarn link kalduna
 ```
