@@ -4,14 +4,16 @@
   "main": "src/index.js",
   "author": "Nikoloz Otiashvili",
   "scripts": {
-    "start": "parcel --no-cache src/index.html",
-    "kalduna": "bash ./generate.sh ./domql-smbls-components"
+    "start": "parcel serve -p8081 --no-cache src/wall/index.html --dist-dir ./dist/wall/.",
+    "convert": "npx esbuild convert.js --outfile=./dist/convert/convert.cjs --bundle --platform=node --target=es2020 --format=cjs && node ./dist/convert/convert.cjs"
   },
   "license": "MIT",
   "dependencies": {
     "@babel/preset-react": "^7.22.3",
     "@emotion/react": "^11.11.0",
     "@symbo.ls/react": "^2.11.39",
+    "globusa": "^1.1.0",
+    "kalduna": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

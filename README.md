@@ -1,27 +1,21 @@
 # component-wall
 A wall of smbls uikit components in React
 
-## Setup
-Install:
-```
-yarn
-ln -s /path/to/smbls/uikit/domql ./domql-smbls-components
-```
-The `/path/to/smbls/uikit/domql` should be the path to the smbls repository plus uikit/domql.
+Run `yarn` install the dependencies.
 
-Run:
-* Convert desired components (for now, use the --only flag like shown)
+In addition, you can do `yarn link kalduna` and `yarn link globusa` to link your
+local versions of those packages.
+
+To run the component wall:
+* Convert the entire UI Kit to React
   ```
-  yarn kalduna --only=Img,Button
+  yarn convert
+  ```
+  Or, to convert a few select components
+  ```
+  yarn convert Img Button Box
   ```
 * Start the server
   ```
   yarn start
   ```
-
-## Can't find `kalduna`
-If running `yarn kalduna` gives an error saying it can't find the
-`kalduna` dependency, you must link it manually:
-```
-yarn link kalduna
-```
