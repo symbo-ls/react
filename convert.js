@@ -6,10 +6,13 @@
 //       node built.js Img Button DatePicker
 //   This command will convert only the Img, Button and DatePicker components.
 
+import fs from 'fs'
+import path from 'path'
 import { convert } from 'kalduna'
-import { parse } from 'globusa'
 
 import * as smbls from '@symbo.ls/uikit'
+
+const DEST_PATH = path.join('src', 'uikit')
 
 const EXCLUDE_EXPORTS_LIST = [
   'Svg',
@@ -19,20 +22,61 @@ const EXCLUDE_EXPORTS_LIST = [
   'transformDuration',
   'transformShadow',
   'transformTransition',
-  // 'DatePickerDay',
-  // 'DatePickerGrid',
+
+  // TODO:
+  'DatePickerDay',
+  'DatePickerGrid',
+  'DatePickerGridContainer',
 ]
 const EXCLUDE_EXPORTS_MAP = EXCLUDE_EXPORTS_LIST
       .reduce((acc, x) => (acc[x] = true, acc), {})
 
+// Essentially does 'mkdir -P'
+async function mkdirp (dir) {
+  try {
+    return await fs.promises.mkdir(dir)
+  } catch (err) {
+    if (err.code !== 'EEXIST') {
+      throw err
+    }
+  }
+  return null
+}
+
+////////////////
 const whitelist = process.argv.slice(2)
 
-for (const key in smbls) {
-  if (whitelist && whitelist.length > 0) {
-    if (!whitelist.includes(key)) continue
+// TODO: pass arguments to this fn (whitelist, dest path, exclude map)
+async function main() {
+  await mkdirp(DEST_PATH)
 
-  } else if (EXCLUDE_EXPORTS_MAP[key]) {
-    continue
+  for (const key in smbls) {
+    if (whitelist && whitelist.length > 0) {
+      if (!whitelist.includes(key))
+        continue
+    } else if (EXCLUDE_EXPORTS_MAP[key]) {
+      continue
+    }
+
+    console.log(key)
+
+    const dobj = smbls[key]
+    if (!dobj.__name) {
+      dobj.__name = key
+    }
+
+    const destFile = path.join(DEST_PATH, `${key}.js`)
+    const convertedModuleStr = convert(dobj, 'react', {
+      verbose: false
+    })
+
+    // Write file
+    if (convertedModuleStr && convertedModuleStr.length > 0) {
+      const fh = await fs.promises.open(destFile, 'w')
+      await fh.writeFile(convertedModuleStr, 'utf8')
+      await fh.close()
+    }
   }
-  console.log(key)
 }
+
+main()
