@@ -52,18 +52,15 @@ async function mkdirp (dir) {
   return null
 }
 
-////////////////
-const whitelist = process.argv.slice(2)
-
-// TODO: pass arguments to this fn (whitelist, dest path, exclude map)
-async function main() {
-  await mkdirp(DEST_PATH)
+async function main(destPath, smbls, opts) {
+  const { whiteList, excludeMap } = opts
+  await mkdirp(destPath)
 
   for (const key in smbls) {
-    if (whitelist && whitelist.length > 0) {
-      if (!whitelist.includes(key))
+    if (whiteList && whiteList.length > 0) {
+      if (!whiteList.includes(key))
         continue
-    } else if (EXCLUDE_EXPORTS_MAP[key]) {
+    } else if (excludeMap[key]) {
       continue
     }
 
@@ -74,7 +71,7 @@ async function main() {
       dobj.__name = key
     }
 
-    const destFile = path.join(DEST_PATH, `${key}.js`)
+    const destFile = path.join(destPath, `${key}.js`)
     const convertedModuleStr = convert(dobj, 'react', {
       verbose: false
     })
@@ -88,4 +85,5 @@ async function main() {
   }
 }
 
-main()
+main(DEST_PATH, smbls, { whiteList:  process.argv.slice(2),
+                         excludeMap: EXCLUDE_EXPORTS_MAP    })
