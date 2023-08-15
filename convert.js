@@ -15,7 +15,10 @@ import * as smbls from '@symbo.ls/uikit'
 const DEST_PATH = path.join('src', 'uikit')
 
 const EXCLUDE_EXPORTS_LIST = [
+  // We have our own React Svg implementation
   'Svg',
+
+  // These are not domql objects
   'keySetters',
   'getSystemTheme',
   'splitTransition',
@@ -23,10 +26,16 @@ const EXCLUDE_EXPORTS_LIST = [
   'transformShadow',
   'transformTransition',
 
-  // TODO:
+  // DatePickerDay can't be built independently of the root DatePicker component
   'DatePickerDay',
+
+  // These two depend on DatePickerDay and therefore can't be built without the
+  // root DatePicker component as well.
   'DatePickerGrid',
   'DatePickerGridContainer',
+
+  // Not a domql object (headless-datepicker)
+  'calendar',
 ]
 const EXCLUDE_EXPORTS_MAP = EXCLUDE_EXPORTS_LIST
       .reduce((acc, x) => (acc[x] = true, acc), {})
