@@ -71,14 +71,16 @@ async function main(destPath, smbls, opts) {
       dobj.__name = key
     }
 
-    const destFile = path.join(destPath, `${key}.js`)
     const convertedModuleStr = convert(dobj, 'react', {
       verbose: false
     })
 
     // Write file
+    const d = path.join(destPath, key)
+    const f = path.join(d, 'index.js')
+    await mkdirp(d)
     if (convertedModuleStr && convertedModuleStr.length > 0) {
-      const fh = await fs.promises.open(destFile, 'w')
+      const fh = await fs.promises.open(f, 'w')
       await fh.writeFile(convertedModuleStr, 'utf8')
       await fh.close()
     }
