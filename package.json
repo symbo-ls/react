@@ -11,9 +11,8 @@
   "dependencies": {
     "@babel/preset-react": "^7.22.3",
     "@emotion/react": "^11.11.0",
-    "@symbo.ls/react": "^2.11.39",
-    "globusa": "^1.1.0",
-    "kalduna": "^1.4.1",
+    "@symbo.ls/react": "latest",
+    "kalduna": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
