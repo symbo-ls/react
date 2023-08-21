@@ -56,6 +56,7 @@ async function main(destPath, smbls, opts) {
   const { whiteList, excludeMap } = opts
   await mkdirp(destPath)
 
+  const dirs = []
   for (const key in smbls) {
     if (whiteList && whiteList.length > 0) {
       if (!whiteList.includes(key))
@@ -84,6 +85,18 @@ async function main(destPath, smbls, opts) {
       await fh.writeFile(convertedModuleStr, 'utf8')
       await fh.close()
     }
+
+    // Collect dir names
+    dirs.push(key)
+  }
+
+  // Generate top index.js file
+  if (dirs.length > 0) {
+    const fileContent = dirs.map(d => `export * from './${d}/index.js'`).join('\n') + '\n'
+    const indexFilePath = path.join(destPath, 'index.js')
+      const fh = await fs.promises.open(indexFilePath, 'w')
+      await fh.writeFile(fileContent, 'utf8')
+      await fh.close()
   }
 }
 
