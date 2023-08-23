@@ -4,8 +4,8 @@ import { SymbolsProvider } from "@symbo.ls/react";
 import { Brick, BrickTitle } from './Brick'
 import image from './test-img.jpg'
 
-import { Img } from './uikit/Img'
-import { Button } from './uikit/Button'
+import Img from './uikit/Img'
+import Button from './uikit/Button'
 import svg from './bell.svg'
 
 export default function ComponentWall(props) {
