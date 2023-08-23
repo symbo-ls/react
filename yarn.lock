@@ -22,7 +22,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.22.9.tgz#71cdb00a1ce3a329ce4cbec3a44f9fef35669730"
   integrity sha512-5UamI7xkUcJ3i9qVDS+KFDEK8/7oJ55/sJMB1Ge7IEapr7KfdfV/HErR+koZwOfd+SgtFKOKRhRakdg++DcJpQ==
 
-"@babel/core@^7.12.0", "@babel/core@^7.22.8":
+"@babel/core@^7.12.0":
   version "7.22.9"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.22.9.tgz#bd96492c68822198f33e8a256061da3cf391f58f"
   integrity sha512-G2EgeufBcYw27U4hhoIwFcgc1XU7TlXJ3mv04oOv1WCuo900U/anZSPzEqNjwdjgffkk2Gs0AN0dW1CKVLcG7w==
@@ -1816,16 +1816,15 @@
     "@symbo.ls/react-icon" latest
     "@symbo.ls/tooltip" latest
 
-"@symbo.ls/react@^2.11.39":
-  version "2.11.125"
-  resolved "https://registry.yarnpkg.com/@symbo.ls/react/-/react-2.11.125.tgz#242aa439068e0e722153c913d59ff3c24668b7e4"
-  integrity sha512-4s2eO4LWsPIAQtLt637U+BnjDX4/wq7TjCbMbdycFHE0vg0qAblxMdcll3EgaGZSEvRTL52EbXpOc5/Krppthg==
+"@symbo.ls/react@latest":
+  version "2.11.132"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/react/-/react-2.11.132.tgz#a5dc3c836e6870fb939d55f9e52f4635d9880b74"
+  integrity sha512-7CThLDS+DkYhu3K1MxM8TPzBra2qotAJCjuca9xBB5YFhUGrEUff2L3z0SDDNOV4BEeAlS9dKQVIi/r7Q5n9eQ==
   dependencies:
     "@symbo.ls/react-atoms" latest
     "@symbo.ls/react-box" latest
     "@symbo.ls/react-button" latest
     "@symbo.ls/react-icon" latest
-    "@symbo.ls/react-icon-text" latest
     "@symbo.ls/react-provider" latest
     "@symbo.ls/react-tooltip" latest
     smbls latest
@@ -2800,17 +2799,6 @@ globals@^13.2.0:
   dependencies:
     type-fest "^0.20.2"
 
-globusa@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/globusa/-/globusa-1.1.0.tgz#5ca5107ce1d101225a480caee6bf8fe3c1643921"
-  integrity sha512-lFTXKGZusS2T5q8H1H57I2knaiQgTBLH+ZJwZTcV/glK/LCjBOZT3iuXf8NyHS75OR8P4l+jVoYFHtk//BKWzg==
-  dependencies:
-    "@babel/core" "^7.22.8"
-    "@babel/parser" "^7.22.7"
-    "@babel/traverse" "^7.22.8"
-    "@babel/types" "^7.22.5"
-    stringify-object-extract-functions "^2.4.1"
-
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -3073,10 +3061,10 @@ json5@^2.2.0, json5@^2.2.1, json5@^2.2.2:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
-kalduna@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/kalduna/-/kalduna-1.4.1.tgz#898da2b0040b68ea27ee85af5b3b28d61651ddc2"
-  integrity sha512-GNxfLgAaEbVE7E/dSEez+d49XyfhRMUTh9gTOVjoUSGJlhzdOJTGNhd8G6N/m26j8IG6aswRAxYIPN4rowNI3w==
+kalduna@latest:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/kalduna/-/kalduna-1.5.1.tgz#7bcc8b0eed29255ec293534ffd342d04228110c3"
+  integrity sha512-M8Cq0+n6dwfdtJMCly1ziJUcdcjEnorXtRwUm1hYS+zUOCAKEpK7XjGQ9lO6hUa5FlfVF07lMcTb/hgFfmilBw==
   dependencies:
     "@domql/state" latest
     "@domql/utils" latest
@@ -3791,7 +3779,7 @@ statuses@2.0.1:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-2.0.1.tgz#55cb000ccf1d48728bd23c685a063998cf1a1b63"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
-stringify-object-extract-functions@2.4.1, stringify-object-extract-functions@^2.4.1:
+stringify-object-extract-functions@2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/stringify-object-extract-functions/-/stringify-object-extract-functions-2.4.1.tgz#f267a0725d3aab0e315bc41f21625d2a908f45b2"
   integrity sha512-tGobwSSInn99hbtOJm1ne8LPzNCXwVgJSHQF0sQyPo7wdXfqRp5KrgzXX66Wpb29LVFoecc/n0hFejuWoxXvmg==
