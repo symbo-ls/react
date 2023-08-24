@@ -6,6 +6,7 @@ import image from './test-img.jpg'
 
 import Img from './uikit/Img'
 import Button from './uikit/Button'
+import Input from './uikit/Input'
 import svg from './bell.svg'
 
 export default function ComponentWall(props) {
@@ -26,7 +27,12 @@ export default function ComponentWall(props) {
             theme={"primary"}
             tag={"button"}
             text={"Click me"}
-            onClick={(ev) => console.log("aaaaaaa")} />
+            logElement={true}
+            onClick={(ev) => { console.log("aaaaaaa"); }} />
+        </Brick>
+
+        <Brick title={"Input"}>
+          <Input />
         </Brick>
       </div>
     </SymbolsProvider>
