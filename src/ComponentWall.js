@@ -4,25 +4,22 @@ import { SymbolsProvider } from "@symbo.ls/react";
 import { Brick, BrickTitle } from './Brick'
 import image from './test-img.jpg'
 
-import Img from './uikit/Img'
-import Button from './uikit/Button'
-import Input from './uikit/Input'
+import * as uikit from './uikit'
 import svg from './bell.svg'
 
 export default function ComponentWall(props) {
-
   return (
     <SymbolsProvider>
       <div>
-        <Brick title={"Atoms.Img"}>
-          <Img
+        <Brick title={"Img"}>
+          <uikit.Img
             src={image}
             alt={'Guy with long hair and wine in hand cheering'}
             title={'Cheers!'} />
         </Brick>
 
         <Brick title={"Button"}>
-          <Button
+          <uikit.Button
             icon={"arrow"}
             theme={"primary"}
             tag={"button"}
@@ -32,7 +29,17 @@ export default function ComponentWall(props) {
         </Brick>
 
         <Brick title={"Input"}>
-          <Input />
+          <uikit.Input placeholder={"Placeholder text"} />
+        </Brick>
+
+        <Brick title={"Text"}>
+          <uikit.Text fontWeight={'900'} lineHeight={'2'}>
+            Hello, world!
+            <br/>
+            I am Nika
+            <br/>
+            and he is also Nika
+          </uikit.Text>
         </Brick>
       </div>
     </SymbolsProvider>

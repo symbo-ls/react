@@ -18,6 +18,9 @@ const EXCLUDE_EXPORTS_LIST = [
   // We have our own React Svg implementation
   'Svg',
 
+  // We have our own React Box implementation
+  'Box',
+
   // These are not domql objects
   'keySetters',
   'getSystemTheme',
@@ -26,11 +29,10 @@ const EXCLUDE_EXPORTS_LIST = [
   'transformShadow',
   'transformTransition',
 
-  // DatePickerDay can't be built independently of the root DatePicker component
+  // FIXME: Temporary list of components we want to skip
+  'DatePicker',
   'DatePickerDay',
-
-  // These two depend on DatePickerDay and therefore can't be built without the
-  // root DatePicker component as well.
+  'DatePickerTwoColumns',
   'DatePickerGrid',
   'DatePickerGridContainer',
 
@@ -92,7 +94,9 @@ async function main(destPath, smbls, opts) {
 
   // Generate top index.js file
   if (dirs.length > 0) {
-    const fileContent = dirs.map(d => `export * from './${d}/index.js'`).join('\n') + '\n'
+    const importLines = dirs.map(d => `import ${d} from './${d}'`).join('\n') + '\n'
+    const exportLines = 'export {\n' + dirs.map(d => `  ${d}`).join(',\n') + '\n}\n'
+    const fileContent = importLines + '\n' + exportLines
     const indexFilePath = path.join(destPath, 'index.js')
       const fh = await fs.promises.open(indexFilePath, 'w')
       await fh.writeFile(fileContent, 'utf8')
