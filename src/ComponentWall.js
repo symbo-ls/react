@@ -32,14 +32,9 @@ export default function ComponentWall(props) {
           <uikit.Input placeholder={"Placeholder text"} />
         </Brick>
 
-        <Brick title={"Text"}>
-          <uikit.Text fontWeight={'900'} lineHeight={'2'}>
-            Hello, world!
-            <br/>
-            I am Nika
-            <br/>
-            and he is also Nika
-          </uikit.Text>
+        <Brick title={"Card"}>
+          <uikit.Card 
+          />
         </Brick>
       </div>
     </SymbolsProvider>

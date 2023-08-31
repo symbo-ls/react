@@ -516,7 +516,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.8.1.tgz#c1ddb040429c6d21d38cc945fe75c818cfb68e17"
   integrity sha512-W2P2c/VRW1/1tLox0mVUalvnWXxavmv/Oum2aPsRcoDJuob75FC3Y8FbpfLwUegRcxINtGUMPq0tFCvYNTBXNA==
 
-"@emotion/react@^11.11.1":
+"@emotion/react@^11.11.0":
   version "11.11.1"
   resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.11.1.tgz#b2c36afac95b184f73b08da8c214fdf861fa4157"
   integrity sha512-5mlW1DquU5HaxjLkfkGN1GA/fvVGdyHURRiX/0FHl2cfIfRxSOfmxEH5YS43edp0OldZrZ+dkBKbngxcNCdZvA==
@@ -715,7 +715,7 @@
   dependencies:
     "@parcel/plugin" "2.9.3"
 
-"@parcel/config-default@2.9.3":
+"@parcel/config-default@2.9.3", "@parcel/config-default@^2.9.3":
   version "2.9.3"
   resolved "https://registry.yarnpkg.com/@parcel/config-default/-/config-default-2.9.3.tgz#343172f9f91563ee6024a323eea9825ae89eedc3"
   integrity sha512-tqN5tF7QnVABDZAu76co5E6N8mA9n8bxiWdK4xYyINYFIEHgX172oRTqXTnhEMjlMrdmASxvnGlbaPBaVnrCTw==
@@ -1132,6 +1132,13 @@
     "@parcel/workers" "2.9.3"
     nullthrows "^1.1.1"
 
+"@parcel/transformer-inline-string@^2.9.3":
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-inline-string/-/transformer-inline-string-2.9.3.tgz#3501b2e5e311347bc377f3409e3813621275c1ef"
+  integrity sha512-IZNd0Ksl32psX1M41KbUc4BmvVSoLVnlpaMrh9C/l+piFSkDXWMnF0PONX/RcxYMBIwB2jYllheIKH54naeNaA==
+  dependencies:
+    "@parcel/plugin" "2.9.3"
+
 "@parcel/transformer-js@2.9.3":
   version "2.9.3"
   resolved "https://registry.yarnpkg.com/@parcel/transformer-js/-/transformer-js-2.9.3.tgz#4b72022da9bf5aa743a89961c4d61b681bf5e7b9"
@@ -1183,7 +1190,7 @@
     posthtml-render "^3.0.0"
     semver "^7.5.2"
 
-"@parcel/transformer-raw@2.9.3":
+"@parcel/transformer-raw@2.9.3", "@parcel/transformer-raw@^2.9.3":
   version "2.9.3"
   resolved "https://registry.yarnpkg.com/@parcel/transformer-raw/-/transformer-raw-2.9.3.tgz#c8e23881ecb45a6dc3fcc5a271cf0d55476beabc"
   integrity sha512-oqdPzMC9QzWRbY9J6TZEqltknjno+dY24QWqf8ondmdF2+W+/2mRDu59hhCzQrqUHgTq4FewowRZmSfpzHxwaQ==

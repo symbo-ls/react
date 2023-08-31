@@ -11,6 +11,8 @@
   "dependencies": {
     "@babel/preset-react": "^7.22.3",
     "@emotion/react": "^11.11.0",
+    "@parcel/config-default": "^2.9.3",
+    "@parcel/transformer-raw": "^2.9.3",
     "@symbo.ls/create": "^2.11.138",
     "@symbo.ls/react": "latest",
     "kalduna": "latest",
@@ -20,6 +22,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.0",
     "@emotion/babel-plugin": "^11.11.0",
+    "@parcel/transformer-inline-string": "^2.9.3",
     "buffer": "^5.5.0||^6.0.0",
     "parcel": "^2.9.1",
     "process": "^0.11.10"

@@ -36,6 +36,10 @@ const EXCLUDE_EXPORTS_LIST = [
   'DatePickerGrid',
   'DatePickerGridContainer',
 
+  // TODO: temp skip
+  'Picture',
+  'Text',
+
   // Not a domql object (headless-datepicker)
   'calendar',
 ]
