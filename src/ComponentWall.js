@@ -34,8 +34,25 @@ export default function ComponentWall(props) {
 
         <Brick title={"Card"}>
           <uikit.Card 
-          />
+            logElement={true}
+            color="white" />
         </Brick>
+
+        <Brick title={"Avatar"}>
+          <uikit.Avatar key={"123"} />
+        </Brick>
+
+        {/*<Brick title={"AvatarChooser"}>
+          <uikit.AvatarChooser
+            logElement={true}
+            options={[
+              { text: 'Kevin' },
+              { text: 'Jay' }
+            ]}
+            />
+        </Brick> */}
+
+
       </div>
     </SymbolsProvider>
   )
