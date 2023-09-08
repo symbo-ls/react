@@ -1,0 +1,10 @@
+{
+  "npmClient": "yarn",
+  "version": "2.11.157",
+  "packages": [
+    "src/*",
+    "src/uikit/*",
+    "src/uikit/*/*",
+    "."
+  ]
+}
