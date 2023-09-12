@@ -5,7 +5,7 @@ export function Brick(props) {
     <div style={{
         border: 'solid 3px black',
         padding: '10px',
-        margin: 0,
+        margin: '5px',
         display: 'inline-block',
       }}>
       <h3 style={{

@@ -10,7 +10,13 @@ import svg from './bell.svg'
 export default function ComponentWall(props) {
   return (
     <SymbolsProvider>
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'flex-start',
+          justifyContent: 'flex-start',
+        }}>
         <Brick title={"Img"}>
           <uikit.Img
             src={image}
@@ -18,7 +24,11 @@ export default function ComponentWall(props) {
             title={'Cheers!'} />
         </Brick>
 
-        <Brick title={"Button"}>
+        <Brick title={"Avatar"}>
+          <uikit.Avatar key={"123"} />
+        </Brick>
+
+        {/*<Brick title={"Button"}>
           <uikit.Button
             icon={"arrow"}
             theme={"primary"}
@@ -26,21 +36,18 @@ export default function ComponentWall(props) {
             text={"Click me"}
             logElement={true}
             onClick={(ev) => { console.log("aaaaaaa"); }} />
-        </Brick>
+        </Brick>*/}
 
+        {/*
         <Brick title={"Input"}>
           <uikit.Input placeholder={"Placeholder text"} />
-        </Brick>
+        </Brick>*/}
 
-        <Brick title={"Card"}>
+        {/*<Brick title={"Card"}>
           <uikit.Card 
             logElement={true}
             color="white" />
-        </Brick>
-
-        <Brick title={"Avatar"}>
-          <uikit.Avatar key={"123"} />
-        </Brick>
+        </Brick>*/}
 
         {/*<Brick title={"AvatarChooser"}>
           <uikit.AvatarChooser
