@@ -28,36 +28,34 @@ export default function ComponentWall(props) {
           <uikit.Avatar key={"123"} />
         </Brick>
 
-        {/*<Brick title={"Button"}>
+        <Brick title={"Button"}>
           <uikit.Button
             icon={"arrow"}
             theme={"primary"}
             tag={"button"}
             text={"Click me"}
-            logElement={true}
             onClick={(ev) => { console.log("aaaaaaa"); }} />
-        </Brick>*/}
+        </Brick>
 
-        {/*
+        
         <Brick title={"Input"}>
           <uikit.Input placeholder={"Placeholder text"} />
-        </Brick>*/}
+        </Brick>
 
-        {/*<Brick title={"Card"}>
+        <Brick title={"Card"}>
           <uikit.Card 
             logElement={true}
             color="white" />
-        </Brick>*/}
+        </Brick>
 
-        {/*<Brick title={"AvatarChooser"}>
+        <Brick title={"AvatarChooser"}>
           <uikit.AvatarChooser
-            logElement={true}
             options={[
               { text: 'Kevin' },
               { text: 'Jay' }
             ]}
             />
-        </Brick> */}
+        </Brick>
 
 
       </div>
