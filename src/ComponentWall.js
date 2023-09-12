@@ -20,8 +20,8 @@ export default function ComponentWall(props) {
         <Brick title={"Img"}>
           <uikit.Img
             src={image}
-            alt={'Guy with long hair and wine in hand cheering'}
-            title={'Cheers!'} />
+            alt={'Cat with no signal on its head'}
+            title={'No signal!'} />
         </Brick>
 
         <Brick title={"Avatar"}>
