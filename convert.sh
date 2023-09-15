@@ -8,5 +8,5 @@ tmp="./.smbls_convert_tmp/"
 rm -rf ./src/uikit
 
 smbls convert --internal-uikit -t "$tmp" "$src" "$dest"
-npx lerna exec -- yarn link
+npx lerna exec -- yarn unlink && yarn link
 npx lerna link --force-local

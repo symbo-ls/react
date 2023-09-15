@@ -14,9 +14,9 @@
     "@emotion/react": "^11.11.0",
     "@parcel/config-default": "^2.9.3",
     "@parcel/transformer-raw": "^2.9.3",
+    "@symbo.ls/cli": "^2.11.159",
     "@symbo.ls/create": "^2.11.138",
     "@symbo.ls/react": "latest",
-    "@symbo.ls/cli": "latest",
     "kalduna": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

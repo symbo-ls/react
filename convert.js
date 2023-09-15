@@ -92,6 +92,7 @@ async function main(destPath, smbls, opts) {
     dirs.push(key)
   }
 
+  // TODO: generate top package.json file
   // Generate top index.js file
   if (dirs.length > 0) {
     const importLines = dirs.map(d => `import ${d} from './${d}'`).join('\n') + '\n'

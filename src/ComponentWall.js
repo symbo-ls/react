@@ -8,6 +8,7 @@ import * as uikit from './uikit'
 import svg from './bell.svg'
 
 export default function ComponentWall(props) {
+  console.log("uikit:", uikit)
   return (
     <SymbolsProvider>
       <div
@@ -16,6 +17,7 @@ export default function ComponentWall(props) {
           flexDirection: 'row',
           alignItems: 'flex-start',
           justifyContent: 'flex-start',
+          flexWrap: 'wrap',
         }}>
         <Brick title={"Img"}>
           <uikit.Img
@@ -44,8 +46,15 @@ export default function ComponentWall(props) {
 
         <Brick title={"Card"}>
           <uikit.Card 
-            logElement={true}
-            color="white" />
+            color={"white"} />
+        </Brick>
+
+        <Brick title={"Modal"}>
+          <uikit.Modal />
+        </Brick>
+
+        <Brick title={"MessageModal"}>
+          <uikit.MessageModal color={"white"} />
         </Brick>
 
         <Brick title={"AvatarChooser"}>
@@ -57,6 +66,83 @@ export default function ComponentWall(props) {
             />
         </Brick>
 
+        <Brick title={"Label"}>
+          <uikit.Label />
+        </Brick>
+
+        <Brick title={"Dialog"}>
+          <uikit.Dialog>
+            Yes. If you change your mind and no longer wish to keep your iPhone,
+            you have the option to return it to us. The returned iPhone must be
+            in good condition and in the original packaging, which contains all
+            accessories, manuals and instructions. Returns are subject to Apples
+            Sales and Refunds Policy.
+          </uikit.Dialog>
+        </Brick>
+
+        <Brick title={"DialogFooter"}>
+          <uikit.DialogFooter>Hello friends</uikit.DialogFooter>
+        </Brick>
+
+        <Brick title={"DropdownList"}>
+          <uikit.DropdownList color={"black"}>
+            <li>Ichi</li>
+            <li>Nii</li>
+            <li>San</li>
+          </uikit.DropdownList>
+        </Brick>
+
+        <Brick title={"Pills"}>
+          <uikit.Pills qty={10} />
+        </Brick>
+
+        <Brick title={"Field"}>
+          <uikit.Field />
+        </Brick>
+
+        <Brick title={"Notification"}>
+          <uikit.Notification />
+        </Brick>
+
+        <Brick title={"UploadLabel"}>
+          <uikit.UploadLabel />
+        </Brick>
+
+        <Brick title={"Tooltip"}>
+          <uikit.Tooltip />
+        </Brick>
+
+        <Brick title={"TimePicker"}>
+          <uikit.TimePicker />
+        </Brick>
+
+        <Brick title={"Textarea"}>
+          <uikit.Textarea />
+        </Brick>
+
+        <Brick title={"TextareaWithTitle"}>
+          <uikit.TextareaWithTitle />
+        </Brick>
+
+        <Brick title={"Video"}>
+          <uikit.Video
+            src={"https://www.youtube.com/embed/kJQP7kiw5Fk?si=InIRHN2hiB2cF9jB"}
+            title="YouTube video player" />
+        </Brick>
+
+        <Brick title={"InfoSet"}>
+          <uikit.InfoSet>
+            I am an infoset
+          </uikit.InfoSet>
+        </Brick>
+
+        <Brick title={"Search"}>
+          <uikit.Search />
+        </Brick>
+
+        {/*<Brick title={"Datepicker"}>
+          <uikit.Datepicker />
+        </Brick> */}
 
       </div>
     </SymbolsProvider>
