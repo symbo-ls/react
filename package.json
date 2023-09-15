@@ -16,9 +16,9 @@
     "@parcel/transformer-raw": "^2.9.3",
     "@symbo.ls/create": "^2.11.138",
     "@symbo.ls/react": "latest",
+    "@symbo.ls/cli": "latest",
     "kalduna": "latest",
     "react": "^18.2.0",
-    "@symbo.ls/react-timepicker": "latest",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
