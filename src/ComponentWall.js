@@ -19,7 +19,6 @@ export default function ComponentWall(props) {
           justifyContent: 'flex-start',
           flexWrap: 'wrap',
         }}>
-
         <Brick title={"Button (primary theme)"}>
           <uikit.Button
             theme={"primary"}
@@ -92,14 +91,14 @@ export default function ComponentWall(props) {
             title={'No signal!'} />
         </Brick>
 
-        <Brick title={"Card"}>
+        {/* <Brick title={"Card"}>
           <uikit.Card 
             color={"white"} />
-        </Brick>
+        </Brick> */}
 
-        <Brick title={"ConvertCard"}>
+        {/* <Brick title={"ConvertCard"}>
           <uikit.ConvertCard theme={"primary"} />
-        </Brick>
+        </Brick> */}
 
         <Brick title={"ConvertBoard"}>
           <uikit.ConvertBoard theme={"primary"} />
@@ -125,20 +124,8 @@ export default function ComponentWall(props) {
           <uikit.CheckIndicator theme={"primary"} />
         </Brick>
 
-        <Brick title={"CheckIconWithBorder"}>
-          <uikit.CheckIconWithBorder theme={"primary"} />
-        </Brick>
-
         <Brick title={"CheckBox"}>
           <uikit.CheckBox theme={"primary"} />
-        </Brick>
-
-        <Brick title={"CheckBoxWithImgWithLabel"}>
-          <uikit.CheckBoxWithImgWithLabel src={image} logElement />
-        </Brick>
-
-        <Brick title={"CheckBoxWithSet"}>
-          <uikit.CheckBoxWithSet src={image} color={"white"} />
         </Brick>
 
         <Brick title={"Modal"}>
@@ -167,10 +154,6 @@ export default function ComponentWall(props) {
 
         <Brick title={"ProgressLine"}>
           <uikit.ProgressLine />
-        </Brick>
-
-        <Brick title={"ProgressLineWithUnitValue"}>
-          <uikit.ProgressLineWithUnitValue />
         </Brick>
 
         <Brick title={"Select"}>
@@ -248,28 +231,12 @@ export default function ComponentWall(props) {
           <uikit.CodeField />
         </Brick>
 
-        <Brick title={"CommonField"}>
-          <uikit.CommonField />
-        </Brick>
-
-        <Brick title={"CustomizedField"}>
-          <uikit.CustomizedField />
-        </Brick>
-
-        <Brick title={"FieldWithAllSet"}>
-          <uikit.FieldWithAllSet />
-        </Brick>
-
         <Brick title={"Input"}>
           <uikit.Input placeholder={"Placeholder text"} />
         </Brick>
 
-        <Brick title={"IndicatorDot"}>
-          <uikit.IndicatorDot />
-        </Brick>
-
         <Brick title={"Link"}>
-          <uikit.Link href="https://google.com">google.com</uikit.Link>
+          <uikit.Link href="https://google.com" target="_blank">google.com</uikit.Link>
         </Brick>
 
         <Brick title={"RouteLink"}>
@@ -290,10 +257,6 @@ export default function ComponentWall(props) {
 
         <Brick title={"Notification"}>
           <uikit.Notification />
-        </Brick>
-
-        <Brick title={"UploadLabel"}>
-          <uikit.UploadLabel />
         </Brick>
 
         <Brick title={"Tooltip"}>
