@@ -45,16 +45,26 @@ export default function ComponentWall(props) {
             onClick={(ev) => { console.log("Clicked on the secondary button"); }} />
         </Brick>
 
+        <Brick title={"ButtonSet"}>
+          <uikit.ButtonSet>
+            <uikit.SquareButton
+              theme={"primary"}
+              onClick={(ev) => { console.log("Clicked on SquareButton"); }} />
+
+            <uikit.SquareButton
+              theme={"primary"}
+              onClick={(ev) => { console.log("Clicked on SquareButton"); }} />
+          </uikit.ButtonSet>
+        </Brick>
+
         <Brick title={"CircleButton"}>
           <uikit.CircleButton
-            text={"!!"}
             theme={"primary"}
             onClick={(ev) => { console.log("Clicked on CircleButton"); }} />
         </Brick>
 
         <Brick title={"SquareButton"}>
           <uikit.SquareButton
-            text={"??"}
             theme={"primary"}
             onClick={(ev) => { console.log("Clicked on SquareButton"); }} />
         </Brick>
@@ -83,9 +93,13 @@ export default function ComponentWall(props) {
           <uikit.CheckIndicator theme={"primary"} />
         </Brick>
 
-        <Brick title={"Checkbox"}>
-          <uikit.Checkbox theme={"primary"} />
+        <Brick title={"CheckIndicatorWithLabel"}>
+          <uikit.CheckIndicatorWithLabel theme={"primary"} />
         </Brick>
+
+        {/* <Brick title={"Checkbox"}>
+          <uikit.Checkbox theme={"primary"} />
+        </Brick> */}
 
         <Brick title={"Modal"}>
           <uikit.Modal />
