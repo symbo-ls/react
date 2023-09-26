@@ -9,6 +9,7 @@ import svg from './bell.svg'
 
 export default function ComponentWall(props) {
   console.log("uikit:", uikit)
+  console.log(Object.keys(uikit).join('\n'))
   return (
     <SymbolsProvider>
       <div
@@ -19,7 +20,6 @@ export default function ComponentWall(props) {
           justifyContent: 'flex-start',
           flexWrap: 'wrap',
         }}>
-
         <Brick title={"Button (primary theme)"}>
           <uikit.Button
             theme={"primary"}
@@ -32,30 +32,6 @@ export default function ComponentWall(props) {
             theme={"secondary"}
             text={"Click me"}
             onClick={(ev) => { console.log("Clicked on the secondary button"); }} />
-        </Brick>
-
-        <Brick title={"ButtonTemplate1"}>
-          <uikit.ButtonTemplate1
-            text={"Click me"}
-            onClick={(ev) => { console.log("Clicked on ButtonTemplate1"); }} />
-        </Brick>
-
-        <Brick title={"ButtonTemplate2"}>
-          <uikit.ButtonTemplate2
-            text={"Click me"}
-            onClick={(ev) => { console.log("Clicked on ButtonTemplate2"); }} />
-        </Brick>
-
-        <Brick title={"ButtonTemplate3"}>
-          <uikit.ButtonTemplate3
-            text={"Click me"}
-            onClick={(ev) => { console.log("Clicked on ButtonTemplate3"); }} />
-        </Brick>
-
-        <Brick title={"ButtonTemplate4"}>
-          <uikit.ButtonTemplate4
-            text={"Click me"}
-            onClick={(ev) => { console.log("Clicked on ButtonTemplate4"); }} />
         </Brick>
 
         <Brick title={"CircleButton"}>
@@ -92,73 +68,21 @@ export default function ComponentWall(props) {
             title={'No signal!'} />
         </Brick>
 
-        <Brick title={"Card"}>
-          <uikit.Card 
+        <Brick title={"BalanceCard"}>
+          <uikit.BalanceCard
             color={"white"} />
-        </Brick>
-
-        <Brick title={"ConvertCard"}>
-          <uikit.ConvertCard theme={"primary"} />
-        </Brick>
-
-        <Brick title={"ConvertBoard"}>
-          <uikit.ConvertBoard theme={"primary"} />
-        </Brick>
-
-        <Brick title={"ChatUser"}>
-          <uikit.ChatUser theme={"secondary"} />
-        </Brick>
-
-        <Brick title={"ChatUserWithButtonSet"}>
-          <uikit.ChatUserWithButtonSet theme={"primary"} />
-        </Brick>
-
-        <Brick title={"ChatUserWithNotification"}>
-          <uikit.ChatUserWithNotification theme={"secondary"} />
-        </Brick>
-
-        <Brick title={"ChatUserWithUploadedFile"}>
-          <uikit.ChatUserWithUploadedFile theme={"white"} />
         </Brick>
 
         <Brick title={"CheckIndicator"}>
           <uikit.CheckIndicator theme={"primary"} />
         </Brick>
 
-        <Brick title={"CheckIconWithBorder"}>
-          <uikit.CheckIconWithBorder theme={"primary"} />
-        </Brick>
-
         <Brick title={"CheckBox"}>
           <uikit.CheckBox theme={"primary"} />
         </Brick>
 
-        <Brick title={"CheckBoxWithImgWithLabel"}>
-          <uikit.CheckBoxWithImgWithLabel src={image} logElement />
-        </Brick>
-
-        <Brick title={"CheckBoxWithSet"}>
-          <uikit.CheckBoxWithSet src={image} color={"white"} />
-        </Brick>
-
         <Brick title={"Modal"}>
           <uikit.Modal />
-        </Brick>
-
-        <Brick title={"MessageModal"}>
-          <uikit.MessageModal color={"white"} />
-        </Brick>
-
-        <Brick title={"ChangePasswordModal"}>
-          <uikit.ChangePasswordModal color={"white"} />
-        </Brick>
-
-        <Brick title={"ResetCompleteModal"}>
-          <uikit.ResetCompleteModal />
-        </Brick>
-
-        <Brick title={"VerificationCodeModal"}>
-          <uikit.VerificationCodeModal />
         </Brick>
 
         <Brick title={"ProgressCircle"}>
@@ -169,45 +93,12 @@ export default function ComponentWall(props) {
           <uikit.ProgressLine />
         </Brick>
 
-        <Brick title={"ProgressLineWithUnitValue"}>
-          <uikit.ProgressLineWithUnitValue />
-        </Brick>
-
         <Brick title={"Select"}>
           <uikit.Select />
         </Brick>
 
         <Brick title={"Avatar"}>
           <uikit.Avatar key={"123"} />
-        </Brick>
-
-        <Brick title={"AvatarChooser"}>
-          <uikit.AvatarChooser
-            options={[
-              { text: 'Kevin' },
-              { text: 'Jay' }
-            ]}
-            />
-        </Brick>
-
-        <Brick title={"BalancesIndicator"}>
-          <uikit.BalancesIndicator />
-        </Brick>
-
-        <Brick title={"DateIndicator"}>
-          <uikit.DateIndicator />
-        </Brick>
-
-        <Brick title={"NotificationAlert"}>
-          <uikit.NotificationAlert text={"Prepeare for landing!"} />
-        </Brick>
-
-        <Brick title={"OrLines"}>
-          <uikit.OrLines />
-        </Brick>
-
-        <Brick title={"CheckMark"}>
-          <uikit.CheckMark/>
         </Brick>
 
         <Brick title={"Label"}>
@@ -244,32 +135,12 @@ export default function ComponentWall(props) {
           <uikit.Field />
         </Brick>
 
-        <Brick title={"CodeField"}>
-          <uikit.CodeField />
-        </Brick>
-
-        <Brick title={"CommonField"}>
-          <uikit.CommonField />
-        </Brick>
-
-        <Brick title={"CustomizedField"}>
-          <uikit.CustomizedField />
-        </Brick>
-
-        <Brick title={"FieldWithAllSet"}>
-          <uikit.FieldWithAllSet />
-        </Brick>
-
         <Brick title={"Input"}>
           <uikit.Input placeholder={"Placeholder text"} />
         </Brick>
 
-        <Brick title={"IndicatorDot"}>
-          <uikit.IndicatorDot />
-        </Brick>
-
         <Brick title={"Link"}>
-          <uikit.Link href="https://google.com">google.com</uikit.Link>
+          <uikit.Link href="https://google.com" target="_blank">google.com</uikit.Link>
         </Brick>
 
         <Brick title={"RouteLink"}>
@@ -281,57 +152,28 @@ export default function ComponentWall(props) {
         </Brick>
 
         <Brick title={"List"}>
-          <uikit.List />
-        </Brick>
-
-        <Brick title={"GroupList"}>
-          <uikit.GroupList />
-        </Brick>
-
-        <Brick title={"Notification"}>
-          <uikit.Notification />
-        </Brick>
-
-        <Brick title={"UploadLabel"}>
-          <uikit.UploadLabel />
-        </Brick>
-
-        <Brick title={"Tooltip"}>
-          <uikit.Tooltip />
+          <uikit.List>
+            <li>Uno</li>
+            <li>Dos</li>
+            <li>Tres</li>
+          </uikit.List>
         </Brick>
 
         <Brick title={"TimePicker"}>
           <uikit.TimePicker />
         </Brick>
 
-        <Brick title={"Textarea"}>
-          <uikit.Textarea />
-        </Brick>
-
-        <Brick title={"TextareaWithTitle"}>
-          <uikit.TextareaWithTitle />
-        </Brick>
-
-        <Brick title={"Video"}>
-          <uikit.Video
-            src={"https://www.youtube.com/embed/kJQP7kiw5Fk?si=InIRHN2hiB2cF9jB"}
-            title="YouTube video player" />
-        </Brick>
-
-        <Brick title={"InfoSet"}>
-          <uikit.InfoSet>
-            I am an infoset
-          </uikit.InfoSet>
-        </Brick>
-
         <Brick title={"Search"}>
           <uikit.Search />
         </Brick>
 
-        {/*<Brick title={"Datepicker"}>
-          <uikit.Datepicker />
-        </Brick> */}
+        <Brick title={"SearchWithButton"}>
+          <uikit.SearchWithButton />
+        </Brick>
 
+        <Brick title={"SearchWithDropDownButton"}>
+          <uikit.SearchWithDropDownButton />
+        </Brick>
       </div>
     </SymbolsProvider>
   )
