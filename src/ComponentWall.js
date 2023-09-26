@@ -5,11 +5,12 @@ import { Brick, BrickTitle } from './Brick'
 import image from './test-img.jpg'
 
 import * as uikit from './uikit'
+import * as atoms from '@symbo.ls/atoms'
 import svg from './bell.svg'
 
 export default function ComponentWall(props) {
   console.log("uikit:", uikit)
-  console.log(Object.keys(uikit).join('\n'))
+  console.log(Object.keys(uikit).filter(v => !Object.keys(atoms).includes(v)).join('\n'))
   return (
     <SymbolsProvider>
       <div
@@ -20,6 +21,16 @@ export default function ComponentWall(props) {
           justifyContent: 'flex-start',
           flexWrap: 'wrap',
         }}>
+        <Brick title={"Circle"}>
+          <uikit.Circle
+            theme={"primary"}
+            onClick={(ev) => { console.log("Clicked on the primary Circle"); }} />
+        </Brick>
+
+        <Brick title={"Box"}>
+          <uikit.Box />
+        </Brick>
+
         <Brick title={"Button (primary theme)"}>
           <uikit.Button
             theme={"primary"}
@@ -48,11 +59,11 @@ export default function ComponentWall(props) {
             onClick={(ev) => { console.log("Clicked on SquareButton"); }} />
         </Brick>
 
-        <Brick title={"CancelConfirmButtons"}>
+        {/* <Brick title={"CancelConfirmButtons"}>
           <uikit.CancelConfirmButtons
             theme={"primary"}
             onClick={(ev) => { console.log("Clicked on CancelConfirmButtons"); }} />
-        </Brick>
+        </Brick> */}
         
         <Brick title={"Img"}>
           <uikit.Img
@@ -68,29 +79,16 @@ export default function ComponentWall(props) {
             title={'No signal!'} />
         </Brick>
 
-        <Brick title={"BalanceCard"}>
-          <uikit.BalanceCard
-            color={"white"} />
-        </Brick>
-
         <Brick title={"CheckIndicator"}>
           <uikit.CheckIndicator theme={"primary"} />
         </Brick>
 
-        <Brick title={"CheckBox"}>
-          <uikit.CheckBox theme={"primary"} />
+        <Brick title={"Checkbox"}>
+          <uikit.Checkbox theme={"primary"} />
         </Brick>
 
         <Brick title={"Modal"}>
           <uikit.Modal />
-        </Brick>
-
-        <Brick title={"ProgressCircle"}>
-          <uikit.ProgressCircle />
-        </Brick>
-
-        <Brick title={"ProgressLine"}>
-          <uikit.ProgressLine />
         </Brick>
 
         <Brick title={"Select"}>
@@ -143,14 +141,6 @@ export default function ComponentWall(props) {
           <uikit.Link href="https://google.com" target="_blank">google.com</uikit.Link>
         </Brick>
 
-        <Brick title={"RouteLink"}>
-          <uikit.RouteLink href="https://xkcd.com">xkcd.com</uikit.RouteLink>
-        </Brick>
-
-        <Brick title={"RouterLink"}>
-          <uikit.RouterLink href="https://bing.com">bing.com</uikit.RouterLink>
-        </Brick>
-
         <Brick title={"List"}>
           <uikit.List>
             <li>Uno</li>
@@ -163,17 +153,17 @@ export default function ComponentWall(props) {
           <uikit.TimePicker />
         </Brick>
 
-        <Brick title={"Search"}>
+        {/* <Brick title={"Search"}>
           <uikit.Search />
-        </Brick>
+        </Brick> */}
 
-        <Brick title={"SearchWithButton"}>
+        {/* <Brick title={"SearchWithButton"}>
           <uikit.SearchWithButton />
-        </Brick>
+        </Brick> */}
 
-        <Brick title={"SearchWithDropDownButton"}>
+        {/* <Brick title={"SearchWithDropDownButton"}>
           <uikit.SearchWithDropDownButton />
-        </Brick>
+        </Brick> */}
       </div>
     </SymbolsProvider>
   )
