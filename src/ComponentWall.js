@@ -113,6 +113,11 @@ export default function ComponentWall(props) {
           <uikit.Avatar key={"123"} />
         </Brick>
 
+        <Brick title={"AvatarChooser"}>
+          <uikit.AvatarChooser
+            options={['Archimedes', 'Thucydides', 'Erathostenes']} />
+        </Brick>
+
         <Brick title={"Label"}>
           <uikit.Label />
         </Brick>
