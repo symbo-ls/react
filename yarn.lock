@@ -1608,7 +1608,7 @@
     "@symbo.ls/atoms" latest
     "@symbo.ls/button" latest
 
-"@symbo.ls/cli@^2.11.159", "@symbo.ls/cli@latest":
+"@symbo.ls/cli@latest":
   version "2.11.162"
   resolved "https://registry.yarnpkg.com/@symbo.ls/cli/-/cli-2.11.162.tgz#3026b5562298d2829972744a45c002765523f30f"
   integrity sha512-NU4oYXWpXy6zLg6liRRC3H9Mt6qWQfwmquit9D9dnVYek0TXCtQJhUiIkUclZXcsi01NSEoH04F/PPz/gYom4g==
@@ -1623,7 +1623,16 @@
     node-fetch "^3.1.0"
     v8-compile-cache "^2.3.0"
 
-"@symbo.ls/create@^2.11.138", "@symbo.ls/create@^2.11.150", "@symbo.ls/create@latest":
+"@symbo.ls/convert@latest":
+  version "2.11.210"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/convert/-/convert-2.11.210.tgz#4dfef1c4b6ca2cba25b36f64e7707b72d0a19ff9"
+  integrity sha512-3jEA3Yo4puae7XsGY3nP32JBSWoiIvRgTTTmdI+Bo1WhEiMdOvqQ0+vIFhg3qDTYzNjGPl5Wix4wnZbED920aw==
+  dependencies:
+    "@domql/utils" latest
+    "@symbo.ls/create" latest
+    jsdom "^22.1.0"
+
+"@symbo.ls/create@^2.11.150", "@symbo.ls/create@latest":
   version "2.11.162"
   resolved "https://registry.yarnpkg.com/@symbo.ls/create/-/create-2.11.162.tgz#4d7cd7ae7f2adb5363416727a8a65dee9dda946b"
   integrity sha512-Odg4QRaSFTEjRxSa/1QWW0PkjJOXsBD/UNcRLL8kZGYem8wUwHm8pJPdff60Yc1stOXcSUmiDYcyiIHjOP/lyw==

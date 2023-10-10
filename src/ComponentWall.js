@@ -9,8 +9,27 @@ import * as atoms from '@symbo.ls/atoms'
 import svg from './bell.svg'
 
 export default function ComponentWall(props) {
-  console.log("uikit:", uikit)
-  console.log(Object.keys(uikit).filter(v => !Object.keys(atoms).includes(v)).join('\n'))
+  // console.log("uikit:", uikit)
+  const [name, setName] = React.useState('lala')
+  
+  const nest = {
+    Flex: {
+      Flex: {
+        TimePickerItem_hh: {
+          NumberInput: {
+            fontSize: '100px',
+            onChange: (e) => {
+              e.stopPropagation()
+              console.log('ONCHANGE')
+              setName(e.target.value + 'kiki')
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // console.log(Object.keys(uikit).filter(v => !Object.keys(atoms).includes(v)).join('\n'))
   return (
     <SymbolsProvider>
       <div
@@ -149,11 +168,12 @@ export default function ComponentWall(props) {
         </Brick>
 
         <Brick title={"Field"}>
-          <uikit.Field />
+          <uikit.Field tag='div' onChange={e => setName(e.target.value)} logElement={true} />
         </Brick>
 
         <Brick title={"Input"}>
-          <uikit.Input placeholder={"Placeholder text"} />
+          <uikit.Input value={name} defaultValue={'yo' + name} onChange={e => setName(e.target.value)} placeholder={"Placeholder text"} />
+          <h6>{ name }</h6>
         </Brick>
 
         <Brick title={"Link"}>
@@ -169,7 +189,7 @@ export default function ComponentWall(props) {
         </Brick>
 
         <Brick title={"TimePicker"}>
-          <uikit.TimePicker />
+          <uikit.TimePicker {...nest} onClick={(e, el) => console.log(el)} onChange={e => setName(e.target.value)} logElement={true} />
         </Brick>
 
         {/* <Brick title={"Search"}>
