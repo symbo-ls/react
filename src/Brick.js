@@ -1,19 +1,22 @@
+
 import * as React from 'react'
+import { H6, Box, Subhead, Flex } from './uikit'
 
 export function Brick(props) {
   return (
-    <div style={{
-        border: 'solid 3px black',
-        padding: '10px',
-        margin: '5px',
-        display: 'inline-block',
-      }}>
-      <h3 style={{
-          margin: '0 0 8px 0',
-        }}>
-        {props.title}
-      </h3>
+    <Flex gridColumnStart="span 2"  align="center center" flow="column" padding="D1 C1" boxSizing="border-box" position="relative" {...props}> 
+      <Subhead margin='0 0 C 0' text={props.title} fontSize='14px' color='white .35' position='absolute' left='50%' transform='translateX(-50%)' top='A' />
       {props.children}
-    </div>
+    </Flex>
   )
+}
+
+Brick.defaultProps = {
+  round: 'Z',
+  border: '1px solid transparent',
+  transition: 'Z background, Z border',
+  ':hover': {
+    background: 'white .035',
+    border: '1px, solid, white .035'
+  }
 }
