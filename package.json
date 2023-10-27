@@ -1,12 +1,19 @@
 {
   "name": "component-wall",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "private": true,
+  "main": "example/index.js",
   "author": "Nikoloz Otiashvili",
   "scripts": {
-    "start": "parcel serve -p8081 --no-cache src/index.html --dist-dir ./dist/wall/.",
+    "start": "parcel serve -p8081 --no-cache example/index.html --dist-dir ./dist/wall/.",
     "convert": "bash convert.sh",
-    "convert:buildscript": "npx esbuild convert.js --outfile=./dist/convert/convert.cjs --bundle --platform=node --target=es2020 --format=cjs && rm -rf src/uikit/ && node ./dist/convert/convert.cjs"
+    "convert:buildscript": "npx esbuild convert.js --outfile=./dist/convert/convert.cjs --bundle --platform=node --target=es2020 --format=cjs && rm -rf example/uikit/ && node ./dist/convert/convert.cjs",
+    "clean": "yarn clean:dist; yarn clean:packages; yarn clean:modules; yarn clean:package-modules",
+    "clean:dist": "rm -rf ./dist ./.cache ./.parcel-cache",
+    "clean:modules": "rm -rf node_modules yarn.lock package-lock.json lerna-debug.log yarn-error.log",
+    "clean:packages": "lerna exec -- rm -rf dist yarn.lock yarn-error.log package-lock.json",
+    "clean:package-modules": "lerna exec -- rm -rf node_modules yarn.lock yarn-error.log package-lock.json",
+    "reinstall": "yarn clean; yarn"
   },
   "license": "UNLICENSED",
   "dependencies": {
@@ -15,8 +22,8 @@
     "@parcel/config-default": "^2.9.3",
     "@parcel/transformer-raw": "^2.9.3",
     "@symbo.ls/cli": "latest",
-    "@symbo.ls/create": "latest",
     "@symbo.ls/convert": "latest",
+    "@symbo.ls/create": "latest",
     "@symbo.ls/react": "latest",
     "kalduna": "latest",
     "react": "^18.2.0",
@@ -27,7 +34,12 @@
     "@emotion/babel-plugin": "^11.11.0",
     "@parcel/transformer-inline-string": "^2.9.3",
     "buffer": "^5.5.0||^6.0.0",
+    "globusa": "^1.1.4",
     "parcel": "^2.9.1",
     "process": "^0.11.10"
-  }
+  },
+  "workspaces": [
+    "packages/*",
+    "packages/*/*"
+  ]
 }
