@@ -15,5 +15,6 @@
     "react-dom": "^18.2.0"
   },
   "main": "index.js",
-  "source": "index.js"
+  "source": "index.js",
+  "gitHead": "fe0a7973380f6681850da574f434574a654d40bf"
 }
