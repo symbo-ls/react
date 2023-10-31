@@ -1,14 +1,14 @@
 {
   "name": "@symbo.ls/react-unitvalue",
-  "version": "2.11.231",
+  "version": "2.11.158",
   "license": "MIT",
   "dependencies": {
-    "css-in-props": "latest",
-    "@emotion/react": "^11.11.0",
     "@emotion/css": "^11.11.0",
+    "@emotion/react": "^11.11.0",
+    "@symbo.ls/atoms": "latest",
     "@symbo.ls/create": "latest",
     "@symbo.ls/react": "latest",
-    "@symbo.ls/atoms": "latest"
+    "css-in-props": "latest"
   },
   "peerDependencies": {
     "react": "^18.2.0",
