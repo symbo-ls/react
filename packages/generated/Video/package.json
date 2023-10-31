@@ -1,0 +1,18 @@
+{
+  "name": "@symbo.ls/react-video",
+  "version": "2.11.231",
+  "license": "MIT",
+  "dependencies": {
+    "css-in-props": "latest",
+    "@emotion/react": "^11.11.0",
+    "@emotion/css": "^11.11.0",
+    "@symbo.ls/create": "latest",
+    "@symbo.ls/react": "latest"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "main": "index.js",
+  "source": "index.js"
+}

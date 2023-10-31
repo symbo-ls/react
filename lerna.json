@@ -3,7 +3,7 @@
   "version": "2.11.157",
   "useWorkspaces": true,
   "packages": [
-    "packages/*",
-    "packages/*/*"
+    "packages/generated/",
+    "packages/generated/*"
   ]
 }

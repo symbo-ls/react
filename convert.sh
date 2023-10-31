@@ -16,4 +16,4 @@ npx lerna exec --no-bail -- yarn link
 set -e
 npx lerna link --force-local
 
-cp symbols.json ./src/uikit/Provider/.
+cp symbols.json ./packages/generated/Provider/.
