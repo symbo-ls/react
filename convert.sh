@@ -1,9 +1,9 @@
 #! /bin/bash
 set -xe
 
-src="${1:-../smbls/packages/uikit/}"
-mrg="${2:-./packages/custom/}"
-dest="./packages/generated"
+src="${1:-./node_modules/@symbo.ls/uikit/}"
+mrg="${2:-./src/}"
+dest="./packages"
 tmp="./.smbls_convert_tmp/"
 
 rm -rf ./packages/generated

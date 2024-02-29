@@ -4,7 +4,7 @@ import { SymbolsProvider } from "@symbo.ls/react";
 import { Brick, BrickTitle } from './Brick'
 import image from './test-img.jpg'
 
-import * as uikit from '../packages/generated'
+import * as uikit from '../packages'
 
 export default function ComponentWall(props) {
   // console.log("uikit:", uikit)
@@ -144,11 +144,6 @@ export default function ComponentWall(props) {
         <Brick title={"UserMessage"}>
           <uikit.UserMessage />
         </Brick>
-
-        <Brick title={"UserWithButton"}>
-          <uikit.UserWithButton />
-        </Brick>
-
         <Brick title={"CommonButton"}>
           <uikit.CommonButton />
         </Brick>
@@ -244,10 +239,6 @@ export default function ComponentWall(props) {
           <uikit.ProgressLine />
         </Brick>
 
-        <Brick gridColumnStart="span 3" title={"UploadingProcess"}>
-          <uikit.UploadingProcess />
-        </Brick>
-
         <Brick gridColumnStart="span 3" title={"UnitValue"}>
           <uikit.UnitValue />
         </Brick>
@@ -256,9 +247,6 @@ export default function ComponentWall(props) {
           <uikit.ProgressLineWithUnitValue />
         </Brick>
 
-        <Brick gridColumnStart="span 3" title={"UploadingProcess2"}>
-          <uikit.UploadingProcess2 />
-        </Brick>
 
         <Brick gridColumnStart="span 3" title={"UploadedProcess2"}>
           <uikit.UploadedProcess2 />
@@ -266,10 +254,6 @@ export default function ComponentWall(props) {
 
         <Brick gridColumnStart="span 3" title={"ProgressCircleWithSideUnitValue"}>
           <uikit.ProgressCircleWithSideUnitValue />
-        </Brick>
-
-        <Brick gridColumnStart="span 3" title={"UploadingProcess3"}>
-          <uikit.UploadingProcess3 />
         </Brick>
 
         <Brick gridColumnStart="span 3" title={"UploadedProcess3"}>
@@ -286,10 +270,6 @@ export default function ComponentWall(props) {
 
         <Brick gridColumnStart="span 3" title={"ProgressCircleWithUnitValue"}>
           <uikit.ProgressCircleWithUnitValue />
-        </Brick>
-
-        <Brick gridColumnStart="span 3" title={"UploadingProcess4"}>
-          <uikit.UploadingProcess4 />
         </Brick>
 
         <Brick gridColumnStart="span 3" title={"UploadedProcess4"}>
@@ -332,9 +312,6 @@ export default function ComponentWall(props) {
           <uikit.FieldTemplate />
         </Brick>
         
-        <Brick gridColumnStart="span 3" title={"TextareaWithButton"}>
-          <uikit.TextareaWithButton />
-        </Brick>
         
         {/* <Brick gridColumnStart="span 3" title={"VerificationCode"}>
           <uikit.VerificationCode />
@@ -440,9 +417,6 @@ export default function ComponentWall(props) {
           <uikit.StepCard />
         </Brick> */}
         
-        <Brick gridColumnStart="span 6" title={"BalanceCard"}>
-          <uikit.BalanceCard />
-        </Brick>
         
         <Brick gridColumnStart="span 6" title={"ConvertCard"}>
           <uikit.ConvertCard />

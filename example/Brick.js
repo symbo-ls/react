@@ -1,6 +1,6 @@
 
 import * as React from 'react'
-import { H6, Box, Subhead, Flex } from '../packages/generated'
+import { H6, Box, Subhead, Flex } from '../packages'
 
 export function Brick(props) {
   return (
