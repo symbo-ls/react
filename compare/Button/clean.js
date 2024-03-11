@@ -12,6 +12,7 @@ import { css } from '@emotion/css';
 
 // reusing other generated react components
 // '@symbo.ls/react' is symlinked to '../', so technically Box is '../Box'
+// so as this file should be in packages, relative would be 'packages/generated/...'
 import { Box, SymbolsProvider } from '@symbo.ls/react'; 
 
 // original domql component code
