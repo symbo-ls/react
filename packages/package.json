@@ -1,6 +1,6 @@
 {
   "name": "@symbo.ls/react",
-  "version": "2.12.0",
+  "version": "2.12.1",
   "license": "MIT",
   "gitHead": "fe0a7973380f6681850da574f434574a654d40bf",
   "dependencies": {
