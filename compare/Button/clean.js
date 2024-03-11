@@ -65,7 +65,8 @@ export function ButtonSet(props) {
     />
   );
 
-  // More correct would be this, as `Flex` is wrapping `Box` anyways.
+  // Every component whether is handmade or generated returns `Box`. So Flex itself returns `Box`.
+  // More correct would be this, as `Flex` is already wrapping `Box` anyways.
   return (
     <Flex
       tag="nav"
