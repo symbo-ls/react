@@ -128,6 +128,8 @@ export function DialogFooter(props) {
         {...exetuteAttrPerComponent(Flex, dobj)}
         domqlElementObject={dobj_Box}
       >
+        {/* this is condition is replication of original domql Svg component */}
+        {/* https://github.com/symbo-ls/smbls/blob/main/packages/uikit/Atoms/Svg.js#L3 */}
         {show_Svg(dobj_Svg) ? (
           <Svg
             width="A"
