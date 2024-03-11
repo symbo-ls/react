@@ -19,7 +19,11 @@ import { Box, SymbolsProvider } from '@symbo.ls/react';
 const orig = {
   tag: 'nav',
   extend: 'Flex',
-  childExtend: 'SquareButton'
+  childExtend: 'SquareButton',
+
+  1: {},
+  2: {},
+  3: {}
 }
 
 export function ButtonSet(props) {
@@ -34,7 +38,7 @@ export function ButtonSet(props) {
   // some domql enabled API that react does not have
   // 
   // when we run `createSkeleton` instead of `create`, DOMQL skips rendering part
-  // and simply retuns the schemed tree that it needs to function.
+  // and simply retuns the schemed tree that it needs to prepare before rendering.
   const { domqlElementObject, children, ...restProps } = props
   const dobj = createSkeleton({
     ...deepMerge({ props: restProps }, orig),
@@ -42,7 +46,7 @@ export function ButtonSet(props) {
   })
 
   // Since DOM nodes are handled by React, and `dobj` does not have DOM nodes, 
-  // we remap and reassing nodes to the domql tree. It's usable for example in
+  // we remap and reassign nodes to the domql tree. It's usable for example in
   // events like onClick(event, element) => element.node // >> accessing node inside element.
   dobj.node = ref_Box.current
   dobj.props = { ...dobj.props, ...props }
@@ -62,7 +66,13 @@ export function ButtonSet(props) {
       className={`${css(exetuteClassPerComponent(Flex, dobj))}`}
       {...dobj.props}
       domqlElementObject={dobj}
-    />
+    >
+      {/* just an example of children nesting */}
+      {/* better example in ../Dialog */}
+      <SquareButton></SquareButton>
+      <SquareButton></SquareButton>
+      <SquareButton></SquareButton>
+    </Box>
   );
 
   // Every component whether is handmade or generated returns `Box`. So Flex itself returns `Box`.
