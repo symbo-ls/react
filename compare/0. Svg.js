@@ -1,9 +1,5 @@
-import * as React from "react";
-import { useRef, useContext } from "react";
-import { createSkeleton } from "@symbo.ls/create";
-import { SymbolsProvider } from "@symbo.ls/react";
-
 // Original: DOMQL
+const useSVGSymbol = icon => `<use xlink:href="#${icon}" />`
 const original = {
   tag: 'svg',
   props: {
@@ -19,8 +15,6 @@ const original = {
     const useSvgSprite = props.spriteId || (context.designSystem && context.designSystem.useSvgSprite)
 
     if (!useSvgSprite && props.src) return props.src
-
-    const useSVGSymbol = icon => `<use xlink:href="#${icon}" />`
 
     const spriteId = props.spriteId
     if (spriteId) return useSVGSymbol(spriteId)
@@ -44,10 +38,14 @@ const original = {
 }
 
 // Converted: React
-export default function Svg(props) {
-  const ref = useRef(null);
+import * as React from "react";
+import { useRef, useContext } from "react";
+import { createSkeleton } from "@symbo.ls/create";
+import { Box, SymbolsProvider } from "@symbo.ls/react";
 
+export default function Svg(props) {
   const context = useContext(SymbolsProvider);
+  const ref = useRef(null);
   
   const { domqlElementObject, ...props } = props
   const dobj = createSkeleton({
