@@ -23,7 +23,7 @@ export default function ComponentName (props) {
   const ref_cancel = useRef(null);
   
   const { domqlElementObject, ...props } = props
-  const dobj = createSkeleton({
+  const dobj = domqlElementObject || createSkeleton({
     extend: [{ props }, original],
     context
   })

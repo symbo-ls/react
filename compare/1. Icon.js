@@ -60,7 +60,7 @@ export default function Icon(props) {
   const ref = useRef(null);
   
   const { domqlElementObject, ...props } = props
-  const dobj = createSkeleton({
+  const dobj = domqlElementObject || createSkeleton({
     extend: [{ props }, original],
     context
   })

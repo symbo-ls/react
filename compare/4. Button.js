@@ -37,7 +37,7 @@ export function Button (props) {
   const ref_Svg = useRef(null);
   
   const { domqlElementObject, ...props } = props
-  const dobj = createSkeleton({
+  const dobj = domqlElementObject || createSkeleton({
     extend: [{ props }, original],
     context
   })

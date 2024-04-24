@@ -32,7 +32,7 @@ export function IconText (props) {
   const ref_Icon = useRef(null)
 
   const { domqlElementObject, ...props } = props
-  const dobj = createSkeleton({
+  const dobj = domqlElementObject || createSkeleton({
     extend: [{ props }, original],
     context
   })
