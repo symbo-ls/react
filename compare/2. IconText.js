@@ -50,7 +50,7 @@ export function IconText (props) {
       domqlElementObject={dobj}
       {...dobj.props}
     >
-      {original.if(dobj_Icon) ? (
+      {original.Icon.if(dobj_Icon) ? (
         <Icon
           ref={ref_Icon}
           domqlElementObject={dobj_Icon}
