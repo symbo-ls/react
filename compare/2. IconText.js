@@ -31,12 +31,6 @@ export function IconText (props) {
   const ref = useRef(null)
   const ref_Icon = useRef(null)
 
-  function Icon_if({ parent, props }) {
-    const doesExist =
-      parent.props.icon || parent.props.Icon || props.name || props.icon
-    return doesExist
-  }
-
   const { domqlElementObject, ...props } = props
   const dobj = createSkeleton({
     extend: [{ props }, original],
@@ -56,7 +50,7 @@ export function IconText (props) {
       domqlElementObject={dobj}
       {...dobj.props}
     >
-      {Icon_if(dobj_Icon) ? (
+      {original.if(dobj_Icon) ? (
         <Icon
           ref={ref_Icon}
           domqlElementObject={dobj_Icon}

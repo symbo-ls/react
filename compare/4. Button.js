@@ -35,20 +35,6 @@ export function Button (props) {
   const context = useContext(SymbolsProvider);
   const ref = useRef(null);
   const ref_Svg = useRef(null);
-
-  function attr_type({ props }) {
-    return props.type;
-  }
-
-  // inherited from FocusableComponent
-  function attr_placeholder({ props }) {
-    return props.placeholder;
-  }
-
-  function attr_tabIndex({ props }) {
-    return props.tabIndex;
-  }
-  // 
   
   const { domqlElementObject, ...props } = props
   const dobj = createSkeleton({
@@ -63,24 +49,28 @@ export function Button (props) {
   
   return (
     <IconText
-      // inherited from FocusableComponent
-      fontSize="A"
-      type="button"
-      border="none"
-      textDecoration="none"
-      lineHeight="1"
-      whiteSpace="nowrap"
-      fontFamily="inherit"
+      // inherit from FocusableComponent
+      {...FocusableComponent.props}
+      // ...
+      // fontSize="A"
+      // type="button"
+      // border="none"
+      // textDecoration="none"
+      // lineHeight="1"
+      // whiteSpace="nowrap"
+      // fontFamily="inherit"
       // 
 
       ref={ref}
       domqlElementObject={dobj}
       {...dobj.props}
-      type={attr_type(dobj)}
+      type={original.attr.type(dobj)}
 
-      // inherited from FocusableComponent
-      placeholder={attr_placeholder(dobj)}
-      tabIndex={attr_tabIndex(dobj)}
+      // inherit attrs from FocusableComponent
+      {...FocusableComponent.attr}
+      // ...
+      // placeholder={FocusableComponent.attr.placeholder(dobj)}
+      // tabIndex={FocusableComponent.attr.tabIndex(dobj)}
       // 
     />
   );

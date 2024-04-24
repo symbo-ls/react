@@ -47,10 +47,6 @@ export function FocusableComponent (props) {
   const context = useContext(SymbolsProvider);
   const ref = useRef(null);
 
-  function attr_type({ props }) {
-    return props.type;
-  }
-  
   const { domqlElementObject, ...props } = props
   const dobj = createSkeleton({
     extend: [{ props }, original],
@@ -72,7 +68,7 @@ export function FocusableComponent (props) {
       whiteSpace="nowrap"
       fontFamily="inherit"
       ref={ref}
-      type={attr_type(dobj)}
+      type={original.attr.type(dobj)}
       domqlElementObject={dobj}
       {...dobj.props}
     />
