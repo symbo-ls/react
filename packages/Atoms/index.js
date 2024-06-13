@@ -1264,6 +1264,8 @@ export function Flex(props) {
     ...dobj.props,
     ...props
   }
+
+  console.log(dobj.props)
   
   if (props.logElement)
     console.log(dobj)

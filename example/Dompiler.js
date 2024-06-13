@@ -44,6 +44,7 @@ export const Button = React.forwardRef((defProps, defRef) => {
     }
     dobj.node = ref.current;
     return jsx(IconText, {
+      tag: dobj.tag,
       innerRef: ref,
       domqlElementObject: dobj,
       ...FocusableComponent.props,

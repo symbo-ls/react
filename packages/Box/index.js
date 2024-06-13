@@ -5,6 +5,7 @@ import { isArray, deepMerge, isUndefined } from '@domql/utils';
 import { filterAttributesByTagName } from 'attrs-in-props';
 import { create } from '@symbo.ls/create';
 import { SymbolsProvider } from '@symbo.ls/react';
+import { createSkeleton } from 'smbls';
 
 export const Box = forwardRef((props, ref) => {
   const context = useSymbols()
