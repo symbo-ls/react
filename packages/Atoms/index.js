@@ -1417,7 +1417,6 @@ export function FocusableComponent(props) {
   return (
     <Box
       fontSize="A"
-      type="button"
       border="none"
       textDecoration="none"
       lineHeight="1"

@@ -1,7 +1,7 @@
 import React, { forwardRef, useRef, useContext } from 'react';
 import { transformEmotion, transformClassname } from 'css-in-props';
 import { useGlobalTheme, useSymbols } from '@symbo.ls/react-provider';
-import { isArray, deepMerge } from '@domql/utils';
+import { isArray, deepMerge, isUndefined } from '@domql/utils';
 import { filterAttributesByTagName } from 'attrs-in-props';
 import { create } from '@symbo.ls/create';
 import { SymbolsProvider } from '@symbo.ls/react';
@@ -10,20 +10,18 @@ export const Box = forwardRef((props, ref) => {
   const context = useSymbols()
   const [theme, setTheme] = useGlobalTheme() // eslint-disable-line no-unused-vars
 
-  const domqlElement = props.domqlElementObject || create({
-    context
-  }, { domqlOptions: { onlyResolveExtends: true } })
+  const dobj = props.domqlElementObject || createSkeleton({
+    extend: [{ props, }, orig],
+    context,
+  });
 
   const element = {
-    ...domqlElement,
-    context,
+    ...dobj,
     node: ref,
     class: {}
   }
   const excludedProps = {}
-
-  console.log(element)
-  const transformedProps = transformClassname(props, context, undefined, excludedProps, element)
+  const transformedProps = transformClassname(element.props, context, undefined, excludedProps, element)
   const propsClass = transformEmotion(transformedProps)
 
   let {
