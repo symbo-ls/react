@@ -4,7 +4,6 @@ import { Box, SymbolsProvider } from '@symbo.ls/react';
 import { create } from '@symbo.ls/create';
 import { deepMerge } from '@domql/utils';
 import { css } from '@emotion/css';
-import { createSkeleton } from 'smbls';
 
 export * from './Flex.js'
 export * from './Grid.js'
@@ -1205,7 +1204,7 @@ export function Direction(props) {
     />
   );
 }
-const original = {
+const orig_8 = {
   props: {display: 'flex'},
   class: {
     flow: ({ props }) => props.flow && { flexFlow: props.flow },
@@ -1219,24 +1218,52 @@ const original = {
   },
   __name: 'Flex'
 };
-
-
-
-
-export const Flex = React.forwardRef((defProps, defRef) => {
+export function Flex(props) {
   const ref_Box = useRef(null);
+  function flow({ props }) {
+    return (
+      props.flow && {
+        flexFlow: props.flow,
+      }
+    );
+  }
+
+  function wrap({ props }) {
+    return (
+      props.wrap && {
+        flexWrap: props.wrap,
+      }
+    );
+  }
+
+  function align({ props }) {
+    if (typeof props.align !== "string") return;
+    const [alignItems, justifyContent] = props.align.split(" ");
+    return {
+      alignItems,
+      justifyContent,
+    };
+  }
 
   const context = useContext(SymbolsProvider);
   
-  let { domqlElementObject, children, ...props } = defProps
-  const dobj = domqlElementObject || createSkeleton({
-    extend: [{ props }, original],
-    context
-  })
-
-  children = defProps.children || dobj.props.children
+  const { domqlElementObject, children, ...restProps } = props
+  const cleanProps = deepMerge({}, { props: restProps }, ['domqlElementObject', 'children'])
+  const dobj = {
+    ...create({
+      ...deepMerge(cleanProps, orig_8),
+      context
+    }, { 
+      domqlOptions: { onlyResolveExtends: true } 
+    })
+  }
 
   dobj.node = ref_Box.current
+
+  dobj.props = {
+    ...dobj.props,
+    ...props
+  }
 
   if (props.logElement)
     console.log(dobj)
@@ -1245,15 +1272,13 @@ export const Flex = React.forwardRef((defProps, defRef) => {
     <Box
       display="flex"
       tag={dobj.tag || dobj.props.tag}
-      ref={defRef || ref_Box}
-      domqlElementObject={dobj}
+      ref={ref_Box}
+      className={`${css(flow(dobj))} ${css(wrap(dobj))} ${css(align(dobj))}`}
       {...dobj.props}
-    >{children}</Box>
+      domqlElementObject={dobj}
+    />
   );
-});
-
-
-
+}
 const orig_9 = {
   props: {
     border: 'none',
