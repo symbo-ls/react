@@ -15,7 +15,7 @@ root.render(
     <SymbolsProvider globalTheme="dark">
       <Flex flow="column" gap="A" boxSize="100%" flexAlign="center center">
         <Button icon="logo" theme="primary">Button</Button>
-        <IconText text="Hii" icon="logo" theme="primary">Hi</IconText>
+        <IconText text="Hii" icon="logo" theme="primary" />
       </Flex>
     </SymbolsProvider>
   </StrictMode>
