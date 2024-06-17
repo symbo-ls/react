@@ -48,11 +48,13 @@ export const IconText = React.forwardRef((defProps, defRef) => {
       domqlElementObject={dobj}
       {...dobj.props}
     >
-      <Icon
-        innerRef={ref_Icon}
-        domqlElementObject={dobj_Icon}
-        {...dobj_Icon.props}
-      />
+      {original.Icon.if(dobj_Icon) ? (
+        <Icon
+          ref={ref_Icon}
+          domqlElementObject={dobj_Icon}
+          {...dobj_Icon.props}
+        />
+      ) : null}
     </Flex>
   )
 });
