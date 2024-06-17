@@ -10,7 +10,7 @@ import { createSkeleton } from 'smbls';
 export const Box = forwardRef((defProps, ref) => {
   const context = useSymbols()
   const [theme, setTheme] = useGlobalTheme() // eslint-disable-line no-unused-vars
-  let { children, domqlElementObject, ...props } = defProps
+  let { children, domqlElementObject, innerRef, ...props } = defProps
 
   const dobj = props.domqlElementObject || createSkeleton({
     extend: [{ props, }, orig],
@@ -30,7 +30,6 @@ export const Box = forwardRef((defProps, ref) => {
     tag,
     className,
     text,
-    innerRef,
     ...rest
   } = excludedProps
 
@@ -38,7 +37,7 @@ export const Box = forwardRef((defProps, ref) => {
 
   if (props.text) {
     if (isArray(children)) children = children.concat(text)
-    else children = [text]
+    else children = [children, text]
   }
 
   return React.createElement(
