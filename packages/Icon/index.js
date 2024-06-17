@@ -7,14 +7,15 @@ import { Box, SymbolsProvider } from '@symbo.ls/react';
 import { create } from '@symbo.ls/create';
 import { css } from '@emotion/css';
 
-export const Icon = (props) => {
-  const { name, iconModifier, ...restProps } = props
+export const Icon = React.forwardRef((defProps, defRef) => {
+  const { name, icon, iconModifier, ...props } = defProps
+  const iconName = icon || name
   return (
-    <Svg {...restProps}>
-      {name ? <use xlinkHref={`#${name}${iconModifier}`} /> : props.children}
+    <Svg {...props}>
+      {iconName ? <use xlinkHref={`#${iconName}${iconModifier}`} /> : props.children}
     </Svg>
   )
-}
+}); 
 Icon.defaultProps = {
   iconModifier: '',
   width: 'A',

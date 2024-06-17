@@ -3,9 +3,7 @@ import  { jsx }  from 'react/jsx-runtime'
 import  { useRef }  from 'react'
 import  { useContext }  from 'react'
 import  { SymbolsProvider }  from '@symbo.ls/react'
-import  { createSkeleton, FocusableComponent }  from 'smbls'
-import { IconText }  from '@symbo.ls/react'
-
+import  { createSkeleton }  from 'smbls'
 const orig = {
     extend: ["IconText", "FocusableComponent"],
     tag: "button",
@@ -29,27 +27,30 @@ const orig = {
         },
     },
 };
+import  { IconText }  from '@symbo.ls/react'
+import  { FocusableComponent }  from '@symbo.ls/react'
 export const Button = React.forwardRef((defProps, defRef) => {
     const defcontext = useContext(SymbolsProvider);
     const ref = defRef || useRef(null);
-    const { domqlElementObject, ...props } = defProps;
-    let dobj
-    try {
-      dobj = domqlElementObject || createSkeleton({
-        extend: [{ props, }, orig],
-        context: defcontext,
-      });
-    } catch (e) {
-      console.log(e)
+    const { domqlElementObject, ... props } = defProps;
+    let dobj;
+        try {
+        dobj = domqlElementObject || createSkeleton({
+    extend: [{
+    props,
+}, orig],
+    context: defcontext,
+});
+    } catch(e) {
+        console.log(e);
     }
     dobj.node = ref.current;
     return jsx(IconText, {
-      tag: dobj.tag,
-      innerRef: ref,
-      domqlElementObject: dobj,
-      ...FocusableComponent.props,
-      ...FocusableComponent.attr,
-      ...dobj.props,
-      type: orig.attr.type(dobj, dobj.state, dobj.context),
-  });
-})
+    innerRef: ref,
+    domqlElementObject: dobj,
+    ...FocusableComponent.props,
+    ...FocusableComponent.attr,
+    ...dobj.props,
+    type: orig.attr.type(dobj, dobj.state, dobj.context),
+});
+}); 

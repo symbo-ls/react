@@ -6,14 +6,16 @@ import { SymbolsProvider } from '../src/Provider';
 
 import { Button } from './Dompiler';
 import { Flex } from '@symbo.ls/react';
+import { IconText } from './IconText';
 
 const container = document.getElementById("app");
 const root = createRoot(container)
 root.render(
   <StrictMode>
     <SymbolsProvider globalTheme="dark">
-      <Flex boxSize="100%" flexAlign="center center">
-        <Button theme="primary">Hi</Button>
+      <Flex flow="column" gap="A" boxSize="100%" flexAlign="center center">
+        <Button icon="logo" theme="primary">Button</Button>
+        <IconText text="Hii" icon="logo" theme="primary">Hi</IconText>
       </Flex>
     </SymbolsProvider>
   </StrictMode>

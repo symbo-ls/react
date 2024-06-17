@@ -7,9 +7,10 @@ import { create } from '@symbo.ls/create';
 import { SymbolsProvider } from '@symbo.ls/react';
 import { createSkeleton } from 'smbls';
 
-export const Box = forwardRef((props, ref) => {
+export const Box = forwardRef((defProps, ref) => {
   const context = useSymbols()
   const [theme, setTheme] = useGlobalTheme() // eslint-disable-line no-unused-vars
+  let { children, domqlElementObject, ...props } = defProps
 
   const dobj = props.domqlElementObject || createSkeleton({
     extend: [{ props, }, orig],
@@ -26,12 +27,10 @@ export const Box = forwardRef((props, ref) => {
   const propsClass = transformEmotion(transformedProps)
 
   let {
-    children,
     tag,
     className,
     text,
     innerRef,
-    domqlElementObject,
     ...rest
   } = excludedProps
 

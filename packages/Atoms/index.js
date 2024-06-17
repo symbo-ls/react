@@ -1265,15 +1265,13 @@ export function Flex(props) {
     ...props
   }
 
-  console.log(dobj.props)
-  
   if (props.logElement)
     console.log(dobj)
 
   return (
     <Box
       display="flex"
-      tag="div"
+      tag={dobj.tag || dobj.props.tag}
       ref={ref_Box}
       className={`${css(flow(dobj))} ${css(wrap(dobj))} ${css(align(dobj))}`}
       {...dobj.props}
