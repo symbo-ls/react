@@ -4,9 +4,10 @@ import { createRoot } from "react-dom/client";
 import { App } from "./App";
 import { SymbolsProvider } from '../src/Provider';
 
-import { Button } from './Dompiler';
+import { IconText } from './DompilerIconText';
+import { Button } from './DompilerButton';
 import { Flex } from '@symbo.ls/react';
-import { IconText } from './IconText';
+// import { IconText } from './IconText';
 
 const container = document.getElementById("app");
 const root = createRoot(container)
@@ -15,7 +16,7 @@ root.render(
     <SymbolsProvider globalTheme="dark">
       <Flex flow="column" gap="A" boxSize="100%" flexAlign="center center">
         <Button icon="logo" theme="primary">Button</Button>
-        <IconText text="Hii" icon="logo" theme="primary" />
+        <IconText text="Hii" icon="logo" theme="secondary" />
       </Flex>
     </SymbolsProvider>
   </StrictMode>
