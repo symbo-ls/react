@@ -25,7 +25,8 @@ const orig = {
         return props.text;
     },
 };
-import  { Flex, Icon }  from '@symbo.ls/react'
+import  { Icon }  from '@symbo.ls/react'
+import  { Flex }  from '@symbo.ls/react'
 export const IconText = React.forwardRef((defProps, defRef) => {
     const defcontext = useContext(SymbolsProvider);
     const ref = defRef || useRef(null);
@@ -51,10 +52,10 @@ export const IconText = React.forwardRef((defProps, defRef) => {
     ...dobj.props,
     align: "center center",
     lineHeight: 1,
-    children: dobj_Icon.if(dobj_Icon) ? jsx(Icon, {
-    ref: ref_Icon,
-    domqlElementObject: dobj_Icon,
-    ...dobj_Icon.props,
-}) : null,
+    children: jsx(Icon, {
+        ref: ref_Icon,
+        domqlElementObject: dobj_Icon,
+        ...dobj_Icon.props,
+    }),
 });
 });

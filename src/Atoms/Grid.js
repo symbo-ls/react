@@ -8,7 +8,7 @@ import { useSymbols } from '@symbo.ls/react-provider'
 
 export const Grid = (props) => {
   const ref = useRef(null)
-  const context = useSymbols()
+  const context = useSymbolsContext()
 
   const element = {
     context,

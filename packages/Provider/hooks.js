@@ -1,6 +1,7 @@
 'use strict'
 
 import React, { useContext } from 'react'
+import { createSkeleton } from 'smbls'
 
 export const PROVIDER_DEFAULT_PROPS = {
   editor: {
@@ -42,4 +43,13 @@ export const useDesignSystem = () => {
   return [designSystem, setDesignSystem]
 }
 
-export const useSymbols = () => useContext(SymbolsContext)
+export const useSymbolsContext = () => {
+  useContext(SymbolsContext)
+}
+
+export const useSymbols = (orig, props) => {
+  createSkeleton({
+    extends: orig,
+    ...props
+  })
+}

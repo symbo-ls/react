@@ -27,8 +27,8 @@ const orig = {
         },
     },
 };
-import  { IconText }  from '@symbo.ls/react'
 import  { FocusableComponent }  from '@symbo.ls/react'
+import { IconText } from './DompilerIconText'
 export const Button = React.forwardRef((defProps, defRef) => {
     const defcontext = useContext(SymbolsProvider);
     const ref = defRef || useRef(null);

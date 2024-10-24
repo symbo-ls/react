@@ -8,7 +8,7 @@ import { filterAttributesByTagName } from 'attrs-in-props'
 import { create } from '@symbo.ls/create'
 
 export const Box = forwardRef((props, ref) => {
-  const context = useSymbols()
+  const context = useSymbolsContext()
   const [theme, setTheme] = useGlobalTheme() // eslint-disable-line no-unused-vars
 
   const domqlElement = props.domqlElementObject || create({
