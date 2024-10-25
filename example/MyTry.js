@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { jsx } from 'react/jsx-runtime'
-import { useSymbols, createComponent, useGlobalState, useRoot, StateWatcher } from '../src/Provider'
 import { Box } from '../src/Box'
 
 const Orig = {
@@ -23,7 +22,7 @@ const Orig = {
   },
 
   Yo: {
-    text: (el, s) => console.log('text',s) || 'yo ' + s.name
+    text: (el, s) => 'yo ' + s.name
   },
 
   Notification: {
@@ -97,7 +96,7 @@ export const MyTry = React.forwardRef((...args) => {
   // console.log('state')
   // console.log(element.__element.state)
   return (
-    <StateWatcher
+    <Box
       ref={ref}
       orig={Orig}
       // ... other props

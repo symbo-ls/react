@@ -2,23 +2,31 @@
 
 import React, { forwardRef } from 'react'
 import { jsx } from 'react/jsx-runtime'
-// import { transformEmotion, transformClassname } from 'css-in-props'
-// import { useGlobalTheme, useSymbols } from '@symbo.ls/react-provider'
-// import { isArray } from '@domql/utils'
-// import { filterAttributesByTagName } from 'attrs-in-props'
-// import { createSkeleton } from '@symbo.ls/create'
-
-import { useSymbols, createComponent } from '../Provider'
+import { useSymbols, useRoot } from '../Provider'
 
 export const Box = forwardRef((...args) => {
   let [ props, ref, key ] = args
-  const element = useSymbols({}, { props, ref, key })
-  const { update, __element, tag, text, ...restProps } = element
 
-  // console.warn('restProps in Box')
-  // console.log(restProps)
-  return jsx(tag || 'div', restProps, key)
-  // return createComponent(Orig, { props, ref, key })
+  // Create element using your useSymbols hook
+  const smbls = useSymbols(ref?.element || props.orig || {}, { props, ref })
+  const element = smbls.ref.element
+  const elementState = element?.state
+  key = key || element.key
+
+  console.log(key, smbls)
+  const { update, __element, tag, text, ...reactElement } = smbls
+  const [state, setState] = React.useState(elementState)
+
+  const rootData = useRoot().data
+  const { listeners } = rootData
+  listeners.push((_, el, s) => setState({ ...s }))
+  elementState.__element.on.stateUpdate = (...args) => {
+    listeners.forEach(fn => fn(...args))
+  }
+
+  React.useEffect(() => element.update(), [state])
+
+  return jsx(tag || 'div', reactElement, key)
 })
 
 

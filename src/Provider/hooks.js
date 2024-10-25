@@ -82,41 +82,11 @@ export function applyEvents (props, element) {
   }
 }
 
-export const StateWatcher = React.forwardRef((props, ref) => {
-  // Store previous state to compare changes
-  const { Base } = props
-
-  // Create element using your useSymbols hook
-  const smbls = useSymbols(ref?.element || props.orig || {}, { props, ref })
-  const element = smbls.ref.element
-  const elementState = element?.state
-
-  const [state, setState] = React.useState(elementState)
-
-  const rootData = useRoot().data
-  const { listeners } = rootData
-  listeners.push((_, el, s) => setState({ ...s }))
-  elementState.__element.on.stateUpdate = (...args) => {
-    listeners.forEach(fn => fn(...args))
-  }
-
-  React.useEffect(() => {
-    // Get current state
-    element.update()
-    console.log(state)
-  }, [state])
-
-  if (Base) return <Base {...smbls} />
-  return <Box {...smbls} />
-})
-
 export function createComponent (orig, args = {}) {
   let { key, ref } = args
-  const element = useSymbols(orig, args)
-  key = key || orig.key || element.key
-  
-  const Base = element.spriteId ? Icon : Box
-  return <StateWatcher ref={ref} key={key} base={Base} />
+  // const Base = element.spriteId ? Icon : Box
+  // return <Base ref={ref} key={key} />
+  return <Box ref={ref} key={key} />
 }
 
 export function applyChildren (element, reactElem) {
