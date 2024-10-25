@@ -3,6 +3,8 @@
 import React, { forwardRef } from 'react'
 import { jsx } from 'react/jsx-runtime'
 import { useSymbols, useRoot } from '../Provider'
+import { Icon } from '../Icon'
+import { Avatar } from '../Avatar'
 
 export const Box = forwardRef((...args) => {
   let [ props, ref, key ] = args
@@ -26,6 +28,8 @@ export const Box = forwardRef((...args) => {
 
   React.useEffect(() => element.update(), [state])
 
+  console.log(reactElement)
+  console.log('')
   return jsx(tag || 'div', reactElement, key)
 })
 

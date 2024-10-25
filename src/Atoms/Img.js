@@ -1,6 +1,6 @@
 'use strict'
 
-import React from 'react'
-import { Box } from '@symbo.ls/react-box'
+import React, { forwardRef } from 'react'
+import { Box } from '../Box'
 
-export const Img = (props) => <Box tag='img' {...props} />
+export const Img = forwardRef((props, ref) => <Box tag='img' ref={ref} {...props} />)

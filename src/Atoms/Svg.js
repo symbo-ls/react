@@ -1,10 +1,11 @@
 'use strict'
 
 import React, { useRef } from 'react'
-import { Box } from '@symbo.ls/react-box'
+import { Box } from '../Box'
 
-export const Svg = (props) => {
+export const Svg = (p) => {
   const ref = useRef(null)
+  const { spriteId, ...props } = p
   return (
     <Box tag='svg' ref={ref} {...props}>
       {props.children}

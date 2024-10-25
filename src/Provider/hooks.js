@@ -82,13 +82,6 @@ export function applyEvents (props, element) {
   }
 }
 
-export function createComponent (orig, args = {}) {
-  let { key, ref } = args
-  // const Base = element.spriteId ? Icon : Box
-  // return <Base ref={ref} key={key} />
-  return <Box ref={ref} key={key} />
-}
-
 export function applyChildren (element, reactElem) {
   let { props, text } = element
   const { text: propText } = props
@@ -101,7 +94,7 @@ export function applyChildren (element, reactElem) {
     ref.element = childElem
     delete reactElem[key]
     if (childElem?.if?.(childElem, childElem.state, childElem.context)) return
-    return createComponent(childElem, { ref, key })
+    return <Box ref={ref} key={key} />
   }).concat(props.children).concat([text]).filter(v => v)
 }
 

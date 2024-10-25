@@ -61,7 +61,7 @@ const Orig = {
       text: 'Can you please review the latest design?',
       padding: 'Z1 A',
       round: 'A',
-      theme: 'dialog-elevated',
+      theme: 'dialog',
       margin: '0',
     }
   },
