@@ -1,5 +1,5 @@
 {
-  "name": "@symbo.ls/react-provider",
+  "name": "@symbo.ls/react-provider-1",
   "version": "2.12.1",
   "dependencies": {
     "@babel/runtime": "^7.11.2",

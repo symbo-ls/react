@@ -2,9 +2,9 @@
 
 import React, { useRef } from 'react'
 import { Flex as smbmsFlex } from '@symbo.ls/atoms'
-import { Box } from '@symbo.ls/react-box'
+import { Box } from '../Box'
 import { transformEmotion, transformClassname } from 'css-in-props'
-import { useSymbols } from '@symbo.ls/react-provider'
+import { useSymbols } from '../Provider'
 
 export const Flex = (props) => {
   const ref = useRef(null)

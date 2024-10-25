@@ -6,7 +6,7 @@ export const DialogFooter = {
     align: 'center flex-end',
     gap: 'X2',
     margin: 'auto - -',
-    padding: 'Y2 X2',
+    padding: 'Y2 X2'
   },
 
   childExtend: {

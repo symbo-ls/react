@@ -1,11 +1,11 @@
-import React, { useRef, useContext } from 'react';
-import  * as D  from '@symbo.ls/button';
-import { IconText } from '@symbo.ls/react-icon';
-import { Box, SymbolsProvider } from '@symbo.ls/react';
-import { create } from '@symbo.ls/create';
-import { deepMerge } from '@domql/utils';
-import { css } from '@emotion/css';
-import { Svg } from '@symbo.ls/react-atoms';
+import React, { useRef, useContext } from 'react'
+import * as D from '@symbo.ls/button'
+import { IconText } from '@symbo.ls/react-icon'
+import { Box, SymbolsProvider } from '@symbo.ls/react'
+import { create } from '@symbo.ls/create'
+import { deepMerge } from '@domql/utils'
+import { css } from '@emotion/css'
+import { Svg } from '@symbo.ls/react-atoms'
 
 export const Button = (props) => <IconText tag='button' {...props} />
 Button.defaultProps = D.Button.props
@@ -13,16 +13,15 @@ Button.defaultProps = D.Button.props
 const orig = {
   tag: 'nav',
   extend: {
-    props: {display: 'flex'},
+    props: { display: 'flex' },
     class: {
       flow: ({ props }) => props.flow && { flexFlow: props.flow },
       wrap: ({ props }) => props.wrap && { flexWrap: props.wrap },
       align: ({ props }) => {
-      if (typeof props.align !== "string")
-        return;
-      const [alignItems, justifyContent] = props.align.split(" ");
-      return { alignItems, justifyContent };
-    }
+        if (typeof props.align !== 'string') { return }
+        const [alignItems, justifyContent] = props.align.split(' ')
+        return { alignItems, justifyContent }
+      }
     }
   },
   childExtend: {
@@ -31,16 +30,15 @@ const orig = {
         extend: [
           {
             extend: {
-              props: {display: 'flex'},
+              props: { display: 'flex' },
               class: {
                 flow: ({ props }) => props.flow && { flexFlow: props.flow },
                 wrap: ({ props }) => props.wrap && { flexWrap: props.wrap },
                 align: ({ props }) => {
-      if (typeof props.align !== "string")
-        return;
-      const [alignItems, justifyContent] = props.align.split(" ");
-      return { alignItems, justifyContent };
-    }
+                  if (typeof props.align !== 'string') { return }
+                  const [alignItems, justifyContent] = props.align.split(' ')
+                  return { alignItems, justifyContent }
+                }
               }
             },
             props: {
@@ -50,16 +48,16 @@ const orig = {
             Icon: {
               props: ({ parent, props }) => ({ icon: parent.props.icon }),
               if: ({ parent, props }) => {
-      const doesExist = parent.props.icon || parent.props.Icon || props.name || props.icon;
-      return doesExist;
-    }
+                const doesExist = parent.props.icon || parent.props.Icon || props.name || props.icon
+                return doesExist
+              }
             },
             text: ({ props }) => props.text,
             '.reversed': {
-              props: {flow: 'row-reverse'}
+              props: { flow: 'row-reverse' }
             },
             '.vertical': {
-              props: {flow: 'column'}
+              props: { flow: 'column' }
             }
           },
           {
@@ -125,7 +123,7 @@ const orig = {
         position: 'relative'
       },
       Icon: {
-        props: {fontSize: 'B1'}
+        props: { fontSize: 'B1' }
       },
       caption: {
         props: {
@@ -137,7 +135,7 @@ const orig = {
       }
     },
     props: {
-      Icon: {name: 'smile'},
+      Icon: { name: 'smile' },
       boxSize: 'fit-content fit-content',
       padding: 'Z2',
       theme: 'tertiary'
@@ -145,45 +143,45 @@ const orig = {
     caption: null
   },
   __name: 'ButtonSet'
-};
+}
 
-export function ButtonSet(props) {
-  const ref_Box = useRef(null);
-  function flow({ props }) {
+export function ButtonSet (props) {
+  const ref_Box = useRef(null)
+  function flow ({ props }) {
     return (
       props.flow && {
-        flexFlow: props.flow,
+        flexFlow: props.flow
       }
-    );
+    )
   }
 
-  function wrap({ props }) {
+  function wrap ({ props }) {
     return (
       props.wrap && {
-        flexWrap: props.wrap,
+        flexWrap: props.wrap
       }
-    );
+    )
   }
 
-  function align({ props }) {
-    if (typeof props.align !== "string") return;
-    const [alignItems, justifyContent] = props.align.split(" ");
+  function align ({ props }) {
+    if (typeof props.align !== 'string') return
+    const [alignItems, justifyContent] = props.align.split(' ')
     return {
       alignItems,
-      justifyContent,
-    };
+      justifyContent
+    }
   }
 
-  const context = useContext(SymbolsProvider);
-  
+  const context = useContext(SymbolsProvider)
+
   const { domqlElementObject, children, ...restProps } = props
   const cleanProps = deepMerge({}, { props: restProps }, ['domqlElementObject', 'children'])
   const dobj = {
     ...create({
       ...deepMerge(cleanProps, orig),
       context
-    }, { 
-      domqlOptions: { onlyResolveExtends: true } 
+    }, {
+      domqlOptions: { onlyResolveExtends: true }
     })
   }
 
@@ -193,18 +191,17 @@ export function ButtonSet(props) {
     ...dobj.props,
     ...props
   }
-  
-  if (props.logElement)
-    console.log(dobj)
+
+  if (props.logElement) { console.log(dobj) }
 
   return (
     <Box
-      display="flex"
-      tag="nav"
+      display='flex'
+      tag='nav'
       ref={ref_Box}
       className={`${css(flow(dobj))} ${css(wrap(dobj))} ${css(align(dobj))}`}
       {...dobj.props}
       domqlElementObject={dobj}
     />
-  );
+  )
 }

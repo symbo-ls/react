@@ -1,9 +1,10 @@
 import { isString, deepMerge } from '@domql/utils';
-import { Svg, Text, Flex } from '@symbo.ls/react-atoms';
 import  * as D  from '@symbo.ls/icon';
 import '@symbo.ls/icon';
 import React, { useRef, useContext } from 'react';
-import { Box, SymbolsProvider } from '@symbo.ls/react';
+import { Svg, Text, Flex } from '../../src/Atoms';
+import { Box } from '../../src/Box';
+import { SymbolsProvider } from '../../src/Provider';
 import { create } from '@symbo.ls/create';
 import { css } from '@emotion/css';
 
@@ -16,7 +17,7 @@ export const Icon = React.forwardRef((defProps, defRef) => {
     </Svg>
   )
 }); 
-Icon.defaultProps = {
+Icon.default = {
   iconModifier: '',
   width: 'A',
   height: 'A',

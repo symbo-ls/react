@@ -1,4 +1,10 @@
 // Original: DOMQL
+// Converted: React
+import * as React from 'react'
+import { useRef, useContext } from 'react'
+import { createSkeleton } from '@symbo.ls/create'
+import { Box, Flex, SymbolsProvider, Icon } from '@symbo.ls/react'
+
 const original = {
   extend: 'Flex',
 
@@ -18,12 +24,6 @@ const original = {
   text: ({ props }) => props.text
 }
 
-// Converted: React
-import * as React from "react"
-import { useRef, useContext } from "react"
-import { createSkeleton } from "@symbo.ls/create"
-import { Box, Flex, SymbolsProvider, Icon } from "@symbo.ls/react"
-
 export const IconText = React.forwardRef((defProps, defRef) => {
   const context = useContext(SymbolsProvider)
   const ref = useRef(null)
@@ -37,24 +37,26 @@ export const IconText = React.forwardRef((defProps, defRef) => {
 
   dobj.node = ref.current
 
-  const dobj_Icon = dobj["Icon"]
+  const dobj_Icon = dobj.Icon
   dobj_Icon.node = ref_Icon.current
 
   return (
     <Flex
-      align="center center"
+      align='center center'
       lineHeight={1}
       innerRef={ref}
       domqlElementObject={dobj}
       {...dobj.props}
     >
-      {original.Icon.if(dobj_Icon) ? (
-        <Icon
-          ref={ref_Icon}
-          domqlElementObject={dobj_Icon}
-          {...dobj_Icon.props}
-        />
-      ) : null}
+      {original.Icon.if(dobj_Icon)
+        ? (
+          <Icon
+            ref={ref_Icon}
+            domqlElementObject={dobj_Icon}
+            {...dobj_Icon.props}
+          />
+          )
+        : null}
     </Flex>
   )
-});
+})
