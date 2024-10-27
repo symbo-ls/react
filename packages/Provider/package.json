@@ -1,6 +1,6 @@
 {
   "name": "@symbo.ls/react-provider",
-  "version": "2.11.221",
+  "version": "2.13.0",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@emotion/react": "^11.11.0",

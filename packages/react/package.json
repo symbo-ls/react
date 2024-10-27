@@ -1,6 +1,6 @@
 {
   "name": "@symbo.ls/react",
-  "version": "2.11.222",
+  "version": "2.13.0",
   "license": "MIT",
   "gitHead": "9d7c64eccdec7466262b60ceb8348b6f9909b004",
   "dependencies": {
@@ -8,7 +8,6 @@
     "react-dom": "^18.2.0",
     "smbls": "^2.11.0"
   },
-  "devDependencies": {},
   "type": "module",
   "module": "dist/esm/index.js",
   "unpkg": "dist/iife/index.js",
