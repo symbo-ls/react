@@ -1,20 +1,34 @@
 {
-  "name": "@symbo.ls/react-icon-1",
-  "version": "2.12.1",
-  "license": "MIT",
+  "name": "@symbo.ls/react-icon",
+  "version": "2.11.221",
   "dependencies": {
-    "@emotion/css": "^11.11.0",
-    "@emotion/react": "^11.11.0",
-    "@symbo.ls/atoms": "latest",
-    "@symbo.ls/create": "latest",
-    "@symbo.ls/react": "latest",
-    "css-in-props": "latest"
+    "@babel/runtime": "^7.11.2",
+    "@domql/utils": "latest",
+    "@symbo.ls/icon": "latest",
+    "@symbo.ls/react-atoms": "latest"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
-  "main": "index.js",
+  "type": "module",
+  "module": "dist/esm/index.js",
+  "unpkg": "dist/iife/index.js",
+  "jsdelivr": "dist/iife/index.js",
+  "main": "dist/esm/index.js",
+  "exports": "./dist/cjs/index.js",
   "source": "index.js",
-  "gitHead": "fe0a7973380f6681850da574f434574a654d40bf"
+  "files": [
+    "*.js",
+    "dist"
+  ],
+  "scripts": {
+    "copy:package:cjs": "cp ../../../build/package-cjs.json dist/cjs/package.json",
+    "build:esm": "npx esbuild *.js --target=es2020 --format=esm --outdir=dist/esm --loader:.js=jsx",
+    "build:cjs": "npx esbuild *.js --target=node16 --format=cjs --outdir=dist/cjs --loader:.js=jsx",
+    "build:iife": "npx esbuild *.js --target=node16 --format=iife --outdir=dist/iife",
+    "build": "yarn build:esm && yarn build:cjs",
+    "prepublish": "rimraf -I dist && yarn build && yarn copy:package:cjs"
+  },
+  "gitHead": "5b2b1516c2cb42c2ee79892b4180bf5cf884fb90"
 }

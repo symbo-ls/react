@@ -1,9 +1,9 @@
 'use strict'
 
 import * as D from '@symbo.ls/avatar'
+import { Img } from '@symbo.ls/react-atoms'
 
-import React, { forwardRef } from 'react'
-import { Img } from '../Atoms/Img'
+import { forwardRef } from 'react'
 
 export const Avatar = forwardRef((props, ref) => {
   const { name, avatarType, ...restProps } = props

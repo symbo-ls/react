@@ -1,6 +1,6 @@
 {
-  "name": "@symbo.ls/react-provider-1",
-  "version": "2.12.1",
+  "name": "@symbo.ls/react-provider",
+  "version": "2.11.221",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@emotion/react": "latest",
@@ -33,5 +33,5 @@
     "build": "yarn build:esm && yarn build:cjs",
     "prepublish": "rimraf -I dist && yarn build && yarn copy:package:cjs"
   },
-  "gitHead": "fe0a7973380f6681850da574f434574a654d40bf"
+  "gitHead": "5b2b1516c2cb42c2ee79892b4180bf5cf884fb90"
 }

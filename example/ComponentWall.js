@@ -4,7 +4,7 @@ import { SymbolsProvider } from '@symbo.ls/react'
 import { Brick, BrickTitle } from './Brick'
 import image from './test-img.jpg'
 
-import * as uikit from '../packages'
+import * as uikit from './generated-packages'
 
 export default function ComponentWall (props) {
   // console.log("uikit:", uikit)

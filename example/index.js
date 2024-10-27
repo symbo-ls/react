@@ -12,8 +12,8 @@ import { SymbolsProvider } from '../src/Provider'
 // import { Checkbox } from './DompilerCheckbox';
 // import { ButtonTwo } from './DompilerButton2';
 // import { DropdownList } from './DompilerDropdown';
-import { MyTry } from './MyTry'
 // import { IconText } from './IconText';
+import { MyTry, Toko } from './MyTry'
 
 const container = document.getElementById('app')
 const root = createRoot(container)
@@ -21,6 +21,7 @@ root.render(
   // <StrictMode>
   <SymbolsProvider>
     <MyTry />
+    <Toko>yooo 111</Toko>
     {/* <Flex flow="column" gap="A" boxSize="100%" flexAlign="center center"> */}
 
     {/* <Button icon="logo" theme="primary">Button</Button>

@@ -1,14 +1,14 @@
 'use strict'
 
-import React, { useRef } from 'react'
 import { Flex as smbmsFlex } from '@symbo.ls/atoms'
 import { Box } from '@symbo.ls/react-box'
 import { transformEmotion, transformClassname } from 'css-in-props'
-import { useSymbols } from '@symbo.ls/react-provider'
+
+import { useRef } from 'react'
 
 export const Flex = (props) => {
   const ref = useRef(null)
-  const context = useSymbols()
+  const context = useSymbolsContext()
 
   const element = {
     context,
@@ -26,4 +26,4 @@ export const Flex = (props) => {
   )
 }
 
-Flex.defaultProps = smbmsFlex.props
+Flex.default = smbmsFlex.props

@@ -8,7 +8,7 @@ import { useSymbols } from '@symbo.ls/react-provider'
 
 export const Flex = (props) => {
   const ref = useRef(null)
-  const context = useSymbolsContext()
+  const context = useSymbols()
 
   const element = {
     context,

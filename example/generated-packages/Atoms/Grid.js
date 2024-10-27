@@ -1,22 +1,22 @@
 'use strict'
 
 import React, { useRef } from 'react'
-import { Flex as smbmsFlex } from '@symbo.ls/atoms'
-import { Box } from '../Box'
+import { Grid as smbmsGrid } from '@symbo.ls/atoms'
+import { Box } from '@symbo.ls/react-box'
 import { transformEmotion, transformClassname } from 'css-in-props'
-import { useSymbols } from '../Provider'
+import { useSymbols } from '@symbo.ls/react-provider'
 
-export const Flex = (props) => {
+export const Grid = (props) => {
   const ref = useRef(null)
-  const context = useSymbolsContext()
+  const context = useSymbols()
 
   const element = {
     context,
     class: {}
   }
-  const excludedProps = {}
 
-  const transformedProps = transformClassname(props, undefined, smbmsFlex.class, excludedProps, element)
+  const excludedProps = {}
+  const transformedProps = transformClassname(props, undefined, smbmsGrid.class, excludedProps, element)
   const propsClass = transformEmotion(transformedProps)
 
   return (
@@ -26,4 +26,4 @@ export const Flex = (props) => {
   )
 }
 
-Flex.defaultProps = smbmsFlex.props
+Grid.defaultProps = smbmsGrid.props

@@ -1,22 +1,14 @@
 {
   "name": "@symbo.ls/react",
-  "version": "2.12.1",
+  "version": "2.11.222",
   "license": "MIT",
-  "gitHead": "fe0a7973380f6681850da574f434574a654d40bf",
+  "gitHead": "9d7c64eccdec7466262b60ceb8348b6f9909b004",
   "dependencies": {
-    "@symbo.ls/react-atoms": "latest",
-    "@symbo.ls/react-box": "latest",
-    "@symbo.ls/react-button": "latest",
-    "@symbo.ls/react-icon": "latest",
-    "@symbo.ls/react-provider": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "smbls": "latest"
   },
-  "devDependencies": {
-    "globusa": "latest",
-    "kalduna": "latest"
-  },
+  "devDependencies": {},
   "type": "module",
   "module": "dist/esm/index.js",
   "unpkg": "dist/iife/index.js",
