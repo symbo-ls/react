@@ -1,11 +1,11 @@
 {
   "name": "@symbo.ls/react-icon",
-  "version": "2.13.1",
+  "version": "2.13.2",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@domql/utils": "^2.5.0",
     "@symbo.ls/icon": "^2.11.0",
-    "@symbo.ls/react-atoms": "^2.13.1"
+    "@symbo.ls/react-atoms": "^2.13.2"
   },
   "peerDependencies": {
     "react": "^18.0.0",
