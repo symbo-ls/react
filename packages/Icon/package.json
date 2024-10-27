@@ -3,9 +3,9 @@
   "version": "2.11.221",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@domql/utils": "latest",
-    "@symbo.ls/icon": "latest",
-    "@symbo.ls/react-atoms": "latest"
+    "@domql/utils": "^2.5.0",
+    "@symbo.ls/icon": "^2.11.0",
+    "@symbo.ls/react-atoms": "^2.11.0"
   },
   "peerDependencies": {
     "react": "^18.0.0",

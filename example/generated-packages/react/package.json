@@ -4,19 +4,16 @@
   "license": "MIT",
   "gitHead": "fe0a7973380f6681850da574f434574a654d40bf",
   "dependencies": {
-    "@symbo.ls/react-atoms": "latest",
-    "@symbo.ls/react-box": "latest",
-    "@symbo.ls/react-button": "latest",
-    "@symbo.ls/react-icon": "latest",
-    "@symbo.ls/react-provider": "latest",
+    "smbls": "^2.11.0",
+    "@symbo.ls/react-atoms": "^2.11.0",
+    "@symbo.ls/react-box": "^2.11.0",
+    "@symbo.ls/react-button": "^2.11.0",
+    "@symbo.ls/react-icon": "^2.11.0",
+    "@symbo.ls/react-provider": "^2.11.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "smbls": "latest"
+    "react-dom": "^18.2.0"
   },
-  "devDependencies": {
-    "globusa": "latest",
-    "kalduna": "latest"
-  },
+  "devDependencies": {},
   "type": "module",
   "module": "dist/esm/index.js",
   "unpkg": "dist/iife/index.js",

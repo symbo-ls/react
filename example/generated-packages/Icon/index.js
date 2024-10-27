@@ -4,7 +4,7 @@ import '@symbo.ls/icon';
 import React, { useRef, useContext } from 'react';
 import { Svg, Text, Flex } from '@symbo.ls/react-atoms';
 import { Box } from '../../../src/Box';
-import { SymbolsProvider } from '../../../src/Provider';
+import { SymbolsProvider } from '../../@symbo.ls/react-provider';
 import { create } from '@symbo.ls/create';
 import { css } from '@emotion/css';
 

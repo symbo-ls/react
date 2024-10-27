@@ -5,11 +5,11 @@
   "dependencies": {
     "@emotion/css": "^11.11.0",
     "@emotion/react": "^11.11.0",
-    "@symbo.ls/atoms": "latest",
-    "@symbo.ls/create": "latest",
-    "@symbo.ls/dialog": "latest",
-    "@symbo.ls/react": "latest",
-    "css-in-props": "latest"
+    "@symbo.ls/atoms": "^2.11.0",
+    "@symbo.ls/create": "^2.11.0",
+    "@symbo.ls/dialog": "^2.11.0",
+    "@symbo.ls/react": "^2.11.0",
+    "css-in-props": "^2.11.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",

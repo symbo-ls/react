@@ -5,9 +5,9 @@
   "dependencies": {
     "@emotion/css": "^11.11.0",
     "@emotion/react": "^11.11.0",
-    "@symbo.ls/create": "latest",
-    "@symbo.ls/react": "latest",
-    "css-in-props": "latest"
+    "@symbo.ls/create": "^2.11.0",
+    "@symbo.ls/react": "^2.11.0",
+    "css-in-props": "^2.11.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",

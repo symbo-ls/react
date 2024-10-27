@@ -3,9 +3,9 @@
   "version": "2.11.222",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@symbo.ls/atoms": "latest",
-    "@symbo.ls/react-box": "latest",
-    "css-in-props": "latest"
+    "@symbo.ls/atoms": "^2.11.0",
+    "@symbo.ls/react-box": "^2.11.0",
+    "css-in-props": "^2.11.0"
   },
   "peerDependencies": {
     "react": "^18.0.0",

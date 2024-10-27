@@ -3,11 +3,11 @@
   "version": "2.12.1",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@emotion/react": "latest",
-    "@symbo.ls/default-config": "latest",
-    "@symbo.ls/fetch": "latest",
-    "@symbo.ls/init": "latest",
-    "@symbo.ls/socket": "latest",
+    "@emotion/react": "^11.11.0",
+    "@symbo.ls/default-config": "^2.11.0",
+    "@symbo.ls/fetch": "^2.11.0",
+    "@symbo.ls/init": "^2.11.0",
+    "@symbo.ls/socket": "^2.11.0",
     "process": "^0.11.10"
   },
   "peerDependencies": {

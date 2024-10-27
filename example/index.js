@@ -2,7 +2,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client'
 // import { App } from "./App";
-import { SymbolsProvider } from '../src/Provider'
+import { SymbolsProvider } from '@symbo.ls/react-provider'
 
 // import { IconText } from './DompilerIconText';
 // import { Button } from './DompilerButton';
