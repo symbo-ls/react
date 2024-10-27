@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { jsx } from 'react/jsx-runtime'
-import { Box } from '../src/Box'
+import { Box } from '@symbo.ls/react-box'
 
 
 export const MyTry = React.forwardRef((...args) => {

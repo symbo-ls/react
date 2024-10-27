@@ -107,7 +107,6 @@ export function useSymbols (props, ref, key) {
   ref = ref || useRef(null)
   let node = ref.current
 
-  console.log(props)
   const elem = checkIfSugar(props) ? { props, node } : { extend: props, node }
 
   const element = ref.element || props?.__element || DOM.create(elem, useRoot(), Math.random() + '', { 

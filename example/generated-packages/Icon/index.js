@@ -3,8 +3,8 @@ import  * as D  from '@symbo.ls/icon';
 import '@symbo.ls/icon';
 import React, { useRef, useContext } from 'react';
 import { Svg, Text, Flex } from '@symbo.ls/react-atoms';
-import { Box } from '../../../src/Box';
-import { SymbolsProvider } from '../../@symbo.ls/react-provider';
+import { Box } from '@symbo.ls/react-box'
+import { SymbolsProvider } from '@symbo.ls/react-provider';
 import { create } from '@symbo.ls/create';
 import { css } from '@emotion/css';
 
