@@ -2,11 +2,19 @@
   "name": "@symbo.ls/react",
   "version": "2.13.0",
   "license": "MIT",
-  "gitHead": "9d7c64eccdec7466262b60ceb8348b6f9909b004",
+  "gitHead": "7d9a9516fefa2efe5e6c86416e9cd7f15414748d",
   "dependencies": {
+    "smbls": "^2.11.0",
+    "@symbo.ls/react-atoms": "^2.13.0",
+    "@symbo.ls/react-box": "^2.13.0",
+    "@symbo.ls/react-icon": "^2.13.0",
+    "@symbo.ls/react-button": "^2.13.0",
+    "@symbo.ls/react-provider": "^2.13.0",
+    "@symbo.ls/react-avatar": "^2.13.0"
+  },
+  "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "smbls": "^2.11.0"
+    "react-dom": "^18.2.0"
   },
   "type": "module",
   "module": "dist/esm/index.js",
