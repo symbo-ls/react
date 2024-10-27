@@ -9,6 +9,8 @@ import { Icon } from '@symbo.ls/react-icon'
 import { Avatar } from '@symbo.ls/react-avatar'
 import { filterAttributesByTagName } from 'attrs-in-props'
 
+const ENV = process.env.NODE_ENV
+
 export const PROVIDER_DEFAULT_PROPS = {
   editor: {
     remote: true,
@@ -30,7 +32,8 @@ export const PROVIDER_DEFAULT_PROPS = {
     useFontImport: true
   },
   components: {},
-  snippets: {}
+  snippets: {},
+  cached: {}
 }
 
 export function getCapitalCaseKeys (obj) {
@@ -108,12 +111,15 @@ export function useSymbols (props, ref, key) {
   let node = ref.current
 
   const elem = checkIfSugar(props) ? { props, node } : { extend: props, node }
-
-  const element = ref.element || props?.__element || DOM.create(elem, useRoot(), Math.random() + '', { 
+  const hasRefElem = ref.element || props?.__element
+  const elemKey = key || `${Math.random()}`
+  const element = hasRefElem || DOM.create(elem, useRoot(), elemKey, { 
     onlyResolveExtends: true
   })
 
-  ref.element = element
+  if (ENV === 'test' || ENV === 'development' || options.alowRefReference) {
+    ref.element = element
+  }
 
   React.useEffect(() => {
     node = element.node = element.node || ref.current
@@ -136,6 +142,15 @@ export function useSymbols (props, ref, key) {
 
 export function createSymbols () {
 
+}
+
+export function pairStateUpdates (state, setState) {
+  const rootData = useRoot().data
+  const { listeners } = rootData
+  listeners.push((_, el, s) => setState({ ...s }))
+  state.__element.on.stateUpdate = (...args) => {
+    listeners.forEach(fn => fn(...args))
+  }
 }
 
 // export const createComponent = React.forwardRef((...args) => {

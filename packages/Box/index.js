@@ -1,32 +1,36 @@
 'use strict '
 
-import { useSymbols, useRoot } from '@symbo.ls/react-provider'
+import { useSymbols, useRoot, useSymbolsContext, pairStateUpdates } from '@symbo.ls/react-provider'
 import React, { forwardRef } from 'react'
 import { jsx } from 'react/jsx-runtime'
 
 export const Box = forwardRef((...args) => {
   let [ props, ref, key ] = args
   const smbls = useSymbols(props, ref, key)
-  const element = smbls.ref.element
+  ref = smbls.ref
+  const element = ref.element
   const elementState = element?.state
   key = key || element.key
 
-  const { update, __element, tag, text, ...reactElement } = smbls
   const [state, setState] = React.useState(elementState)
 
-  // console.log(key, smbls)
+  const context = useSymbolsContext()
+  // console.log('context')
+  // console.log(key, ref, context)
+  // console.log(smbls)
   // console.log(reactElement)
   // console.log('')
 
-  const rootData = useRoot().data
-  const { listeners } = rootData
-  listeners.push((_, el, s) => setState({ ...s }))
-  elementState.__element.on.stateUpdate = (...args) => {
-    listeners.forEach(fn => fn(...args))
-  }
-
+  pairStateUpdates(elementState, setState)
+  
   React.useEffect(() => { element.update() }, [state])
-  return jsx(tag || 'div', reactElement, key)
+
+  const { tag,...reactElement } = smbls
+  const reactElem = jsx(tag || 'div', reactElement, key)
+
+  // if (!ref.element) context
+
+  return reactElem
 })
 
 

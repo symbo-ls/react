@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { jsx } from 'react/jsx-runtime'
 import { Box } from '@symbo.ls/react-box'
+import { useSymbolsContext } from '@symbo.ls/react-provider'
 
 
 export const MyTry = React.forwardRef((...args) => {
@@ -91,6 +92,7 @@ export const MyTry = React.forwardRef((...args) => {
 
   return (
     <Box
+      key="MyTry"
       ref={ref}
       {...elem}
       // ... other props
@@ -98,16 +100,18 @@ export const MyTry = React.forwardRef((...args) => {
   )
 })
 
-
 export const Toko = () => {
-  return <MyTry
-    theme="secondary"
-    text="hello tokoo"
-    H1={{ text: 'yo!'}}
-    Yo={{ hide: true }}
-    Notification={{ theme: 'document', Flex: { Title: { text: 'Yo toko!'  } }}}
-    Yoyo={{ text: '1111 123' }}
-    >tokoo</MyTry>
+  return <>
+    <Box extends="Button" text="123 yoyo" />
+    <MyTry
+      theme="secondary"
+      text="hello tokoo"
+      H1={{ text: 'yo!'}}
+      Yo={{ hide: true }}
+      Notification={{ theme: 'document', Flex: { Title: { text: 'Yo toko!'  } }}}
+      Yoyo={{ text: '1111 123' }}
+      >tokoo</MyTry>
+  </>
 }
 
 
