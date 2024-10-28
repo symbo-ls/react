@@ -4,7 +4,7 @@ import React, { useRef } from 'react'
 import { Grid as smbmsGrid } from '@symbo.ls/atoms'
 import { Box } from '@symbo.ls/react-box'
 import { transformEmotion, transformClassname } from 'css-in-props'
-import { useSymbols } from '@symbo.ls/react-provider'
+import { useSymbolsContext } from '@symbo.ls/react-provider'
 
 export const Grid = (props) => {
   const ref = useRef(null)

@@ -6,6 +6,7 @@ import { Box } from '@symbo.ls/react-box'
 import { transformEmotion, transformClassname } from 'css-in-props'
 
 import { useRef } from 'react'
+import { useSymbolsContext } from '@symbo.ls/react-provider'
 
 export const Flex = (props) => {
   const ref = useRef(null)
