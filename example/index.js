@@ -27,10 +27,9 @@ const designSystem = {
 
 const container = document.getElementById('app')
 const root = createRoot(container)
-console.log(designSystem)
 root.render(
   // <StrictMode>
-  <SymbolsProvider designSystem={designSystem}>
+  <SymbolsProvider>
     <SmblsTestComp />
     <Reuse>yooo 111</Reuse>
     {/* <Flex flow="column" gap="A" boxSize="100%" flexAlign="center center"> */}

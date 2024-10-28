@@ -6,27 +6,45 @@ import DEFAULT_CONFIG from '@symbo.ls/default-config'
 import { init } from '@symbo.ls/init'
 import { fetchProjectAsync } from '@symbo.ls/fetch'
 import { SyncProvider } from './sync'
-import { PROVIDER_DEFAULT_PROPS, SymbolsContext, useSymbolsContext } from './hooks'
+import { SymbolsContext, useRoot, useSymbolsContext } from './hooks'
+import { overwriteDeep } from 'smbls'
 
 const SYMBOLSRC = process.cwd() + '/symbols.json'
 
+export * from './hooks'
+
 export const SymbolsProvider = (props) => {
-  const ctx = useSymbolsContext()
-  const { children } = props
-  const { appKey, editor } = ctx
-  const key = (SYMBOLSRC || ctx || {}).key
-
-  const initialDesignSystem = props.designSystem || ctx.designSystem || DEFAULT_CONFIG
-
-  if (ctx.globalTheme) initialDesignSystem.globalTheme = ctx.globalTheme
-
-  console.log(initialDesignSystem)
-  const scratchInit = init(initialDesignSystem)
-  console.log(scratchInit)
-  const [designSystem, setDesignSystem] = useState(scratchInit)
-  const [state, setState] = useState(ctx.state)
-  const [globalTheme, setGlobalTheme] = useState(designSystem.globalTheme)
   const { Provider } = SymbolsContext
+  const { children, ...restProps } = props
+
+  const ctx = useSymbolsContext()
+
+  const [designSystem, setDesignSystem] = useState(props.designSystem || ctx.designSystem)
+  const [state, setState] = useState(props.state)
+  const [globalTheme, setGlobalTheme] = useState(designSystem.globalTheme)
+
+  overwriteDeep(ctx, {
+    ...restProps,
+    designSystem,
+    state
+  })
+
+  ctx.app = useRoot(ctx)
+
+  return <Provider value={{
+    ...ctx,
+
+    designSystem,
+    setDesignSystem,
+
+    state,
+    setState,
+
+    globalTheme,
+    setGlobalTheme,
+  }}>{children}</Provider>
+}
+
 
   // useEffect(() => {
   //   if (appKey && editor) {
@@ -44,23 +62,3 @@ export const SymbolsProvider = (props) => {
   // }, [Object.values[state]])
 
   // if (editor && editor.liveSync) SyncProvider({ key, ...ctx })
-
-  return React.createElement(
-    Provider,
-    {
-      value: {
-        designSystem,
-        setDesignSystem,
-
-        state,
-        setState,
-
-        globalTheme,
-        setGlobalTheme
-      }
-    },
-    children
-  )
-}
-
-export * from './hooks'

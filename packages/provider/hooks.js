@@ -14,10 +14,8 @@ const ENV = process.env.NODE_ENV
 export const PROVIDER_DEFAULT_PROPS = {
   editor: {
     remote: true,
-    async: true,
-    sync: true,
-    serviceRoute: 'state',
-    endpoint: 'https://api.symbols.app/'
+    liveSync: true,
+    async: true
   },
   state: {
     name: 'jora'
@@ -29,8 +27,11 @@ export const PROVIDER_DEFAULT_PROPS = {
     useIconSprite: true,
     useSvgSprite: true,
     useDocumentTheme: true,
-    useFontImport: true
+    useFontImport: true,
+    useDefaultConfig: true
   },
+  functions: {},
+  dependencies: {},
   components: {},
   snippets: {},
   cached: {}
@@ -68,18 +69,12 @@ export const getClassnameFromProps = (element) => {
 }
 
 let domqlRoot
-export function useRoot () {
-  return domqlRoot || (domqlRoot = createSkeleton({
+export function useRoot (ctx = useSymbolsContext()) {
+  return ctx.app || domqlRoot || (domqlRoot = createSkeleton({
     data: {
       listeners: []
-    },
-    context: {
-      ...useSymbolsContext(),
-      initOptions: {
-        preventEmotion: true
-      }
     }
-  }, { key: 'react-root', state: useGlobalState()[0] }))
+  }, ctx))
 }
 
 export function extractEvents (element) {
