@@ -5,7 +5,7 @@
     "@babel/runtime": "^7.11.2",
     "@symbo.ls/atoms": "^2.11.0",
     "@symbo.ls/react-box": "^2.13.5",
-    "css-in-props": "^2.11.0"
+    "css-in-props": "^2.11.457"
   },
   "peerDependencies": {
     "react": "^18.0.0",
