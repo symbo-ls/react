@@ -258,6 +258,16 @@
     "@domql/state" "^2.5.152"
     "@domql/utils" "^2.5.152"
 
+"@domql/element@^2.5.154":
+  version "2.5.154"
+  resolved "https://registry.yarnpkg.com/@domql/element/-/element-2.5.154.tgz#842819456483a9017e342cec29e7865a4d702764"
+  integrity sha512-enOaoXPaF1hEunm5wTAroBpmlxng7iQM5jbTkPA8evRrtUEKc0DZI36ozCta/SVXodglGJeDyW9WuOLuO0BP+w==
+  dependencies:
+    "@domql/event" "^2.5.154"
+    "@domql/render" "^2.5.154"
+    "@domql/state" "^2.5.154"
+    "@domql/utils" "^2.5.154"
+
 "@domql/emotion@^2.5.0":
   version "2.5.152"
   resolved "https://registry.yarnpkg.com/@domql/emotion/-/emotion-2.5.152.tgz#83208e86220f6f128374fe7d6c7e08f491e6ea35"
@@ -274,6 +284,14 @@
     "@domql/report" "^2.5.0"
     "@domql/utils" "^2.5.152"
 
+"@domql/event@^2.5.154":
+  version "2.5.154"
+  resolved "https://registry.yarnpkg.com/@domql/event/-/event-2.5.154.tgz#1fd5460736f2c7c68a3b3eb4ac38edb93f15467d"
+  integrity sha512-u6gCaJscDnKS0ome39EaWSajlZ+5LHHVDX+Elwkee6w84Z2E+cYd89yMdJIfxSgIqLrtVQgsv7wfwT7zZI8dXQ==
+  dependencies:
+    "@domql/report" "^2.5.0"
+    "@domql/utils" "^2.5.154"
+
 "@domql/globals@latest":
   version "2.3.117"
   resolved "https://registry.yarnpkg.com/@domql/globals/-/globals-2.3.117.tgz#9078af2953e954e5ce03c7e9ff65081b9294de40"
@@ -287,6 +305,15 @@
     "@domql/event" "^2.5.152"
     "@domql/report" "^2.5.0"
     "@domql/utils" "^2.5.152"
+
+"@domql/render@^2.5.154":
+  version "2.5.154"
+  resolved "https://registry.yarnpkg.com/@domql/render/-/render-2.5.154.tgz#053ec1e4ed8efaf420d007ef08fa6c7e3f17dd1b"
+  integrity sha512-JQy6p67/xZNQ2lVXecJzMgh+tQDEtr9jkIPsoWbSPrsbj0i9cqB4q2+nd5s1FIdrkdEevRL/Enlz05rs2J4x/A==
+  dependencies:
+    "@domql/event" "^2.5.154"
+    "@domql/report" "^2.5.0"
+    "@domql/utils" "^2.5.154"
 
 "@domql/report@^2.5.0":
   version "2.5.84"
@@ -309,10 +336,24 @@
     "@domql/report" "^2.5.0"
     "@domql/utils" "^2.5.152"
 
+"@domql/state@^2.5.154":
+  version "2.5.154"
+  resolved "https://registry.yarnpkg.com/@domql/state/-/state-2.5.154.tgz#64d5ea9162b31103c349bef3746b90f45cd12906"
+  integrity sha512-CsSwDRN2V8ng578004wZKn9Cvx7mUaWNNAtVur2QfKjXeu9vTK891wZ75hjytVn3K8Ud5/ujP5z3VyB1sbxftA==
+  dependencies:
+    "@domql/event" "^2.5.154"
+    "@domql/report" "^2.5.0"
+    "@domql/utils" "^2.5.154"
+
 "@domql/utils@^2.5.0", "@domql/utils@^2.5.152", "@domql/utils@latest":
   version "2.5.152"
   resolved "https://registry.yarnpkg.com/@domql/utils/-/utils-2.5.152.tgz#b474f26b9d5574f3397a2aabed237a102ac51fa9"
   integrity sha512-5ZhIOMQym7X6LBJCeYgL0GTKSc1dJgCxpcL+eqSqzDzqUaC4J+2s9zpaG5+UGMAdvVUpqrYQPmD0x/0v+LlPjA==
+
+"@domql/utils@^2.5.154":
+  version "2.5.154"
+  resolved "https://registry.yarnpkg.com/@domql/utils/-/utils-2.5.154.tgz#f041334b2806abe06e93843631ab2210b5b610ee"
+  integrity sha512-GYvcrRl/4PUCRoBLApK9nchQAUbHDEpSpD2ayJ6TzMdKiuqVv20ygTAGVYoS859yYEXq2TDRDi3HJmB0cH0g7g==
 
 "@emnapi/core@^1.1.0":
   version "1.3.1"
@@ -2178,7 +2219,7 @@
     "@symbo.ls/icon" "^2.11.455"
     "@symbo.ls/modal" "^2.11.455"
 
-"@symbo.ls/cli@^2.11.0", "@symbo.ls/cli@^2.11.455":
+"@symbo.ls/cli@^2.11.0":
   version "2.11.455"
   resolved "https://registry.yarnpkg.com/@symbo.ls/cli/-/cli-2.11.455.tgz#f8130c04c183ec6a0d40cfd8db5881a721ef2b69"
   integrity sha512-XXvJJalYjb3HqenSvRj24WnaxAHJMm8N26PEPljz1CemvJ1nrOjpbbBqi2fp2T/FTx+EFDL0pOzqyhVOvRbV6Q==
@@ -2194,7 +2235,23 @@
     node-fetch "^3.1.0"
     v8-compile-cache "^2.3.0"
 
-"@symbo.ls/create@^2.11.0", "@symbo.ls/create@^2.11.455":
+"@symbo.ls/cli@^2.11.460":
+  version "2.11.460"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/cli/-/cli-2.11.460.tgz#772a0dd981fceeff986aaad3f60c79b72b14d5e5"
+  integrity sha512-haX/ua6P7VkzFthwwmLcagWAZkhn3DtEmqKg/lVqMNUri1mFy38otZFky53BL/jpU8XVHk2LAzSkgLQpldkTMw==
+  dependencies:
+    "@symbo.ls/fetch" "^2.11.453"
+    "@symbo.ls/init" "^2.11.453"
+    "@symbo.ls/socket" "^2.11.453"
+    chalk "^5.0.0"
+    commander latest
+    diff "^5.2.0"
+    esbuild "^0.19.2"
+    inquirer "^9.2.17"
+    node-fetch "^3.1.0"
+    v8-compile-cache "^2.3.0"
+
+"@symbo.ls/create@^2.11.0":
   version "2.11.455"
   resolved "https://registry.yarnpkg.com/@symbo.ls/create/-/create-2.11.455.tgz#b3a9c444b44fc6bfa82a365491bbb291fe36bc07"
   integrity sha512-eMOPcK+6ATC5ttTotxv93eRWqkItNqHhdn3g7Em13T9Zyr1MgrVaAbgfdl6WljRjivNCJXIBFNxqZUyX1/yRFA==
@@ -2209,6 +2266,22 @@
     "@symbo.ls/uikit" "^2.11.455"
     "@symbo.ls/utils" "^2.11.453"
     domql "^2.5.0"
+
+"@symbo.ls/create@^2.11.460":
+  version "2.11.460"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/create/-/create-2.11.460.tgz#be07ff8af1fb44f6f1576ecfe134657435ba2ae8"
+  integrity sha512-/xIu+lF5b7g+tI6Y1dcptGkl/fXX4ayNjAkVnLO3+vQE9BlKg/g7Ba/yVc2Te6kc+iMObxELUi6QhFsYIFN5Tg==
+  dependencies:
+    "@domql/emotion" "^2.5.0"
+    "@domql/report" "^2.5.0"
+    "@domql/router" "^2.5.0"
+    "@symbo.ls/fetch" "^2.11.453"
+    "@symbo.ls/init" "^2.11.453"
+    "@symbo.ls/scratch" "^2.11.453"
+    "@symbo.ls/sync" "^2.11.460"
+    "@symbo.ls/uikit" "^2.11.455"
+    "@symbo.ls/utils" "^2.11.453"
+    domql "^2.5.155"
 
 "@symbo.ls/default-config@^2.11.0", "@symbo.ls/default-config@^2.11.453":
   version "2.11.453"
@@ -2473,6 +2546,19 @@
   version "2.11.455"
   resolved "https://registry.yarnpkg.com/@symbo.ls/sync/-/sync-2.11.455.tgz#d653666919fbe2830a9d596043fc73493bbe2f42"
   integrity sha512-bGIl9LUNi+w43Fq0Rw/tj8fXZJFaH2Lttx5WSzsgJAOXVuuHfn7af+pVRKzrGHQW0+il4ToyQgimSxE4XypRkA==
+  dependencies:
+    "@domql/globals" latest
+    "@domql/router" "^2.5.0"
+    "@domql/utils" "^2.5.0"
+    "@symbo.ls/init" "^2.11.453"
+    "@symbo.ls/scratch" "^2.11.453"
+    "@symbo.ls/socket" "^2.11.453"
+    "@symbo.ls/uikit" "^2.11.455"
+
+"@symbo.ls/sync@^2.11.460":
+  version "2.11.460"
+  resolved "https://registry.yarnpkg.com/@symbo.ls/sync/-/sync-2.11.460.tgz#39caa5155a6330c06b37d32e44a33e30f5ddae28"
+  integrity sha512-HLxN03RurfpHPld+qzbvdvLI97YYr73pjNaQ7qxSldxnCjf2jGpDtav3ckFLyrHBydnVMqsoddhK1YrivJKWZg==
   dependencies:
     "@domql/globals" latest
     "@domql/router" "^2.5.0"
@@ -3596,10 +3682,20 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-css-in-props@^2.11.0, css-in-props@^2.11.455:
+css-in-props@^2.11.0:
   version "2.11.455"
   resolved "https://registry.yarnpkg.com/css-in-props/-/css-in-props-2.11.455.tgz#d553143b568c6fe8a73a189b2b2a324cbc3afc6d"
   integrity sha512-swaVfgK0DrS9gnGDnnfgzGwW/Coo2UFybvh7p7OQw7utoJmf0KwRilgS9g6yzzKlU1sGrtm87NKFRTUR7wTAUQ==
+  dependencies:
+    "@domql/utils" "^2.5.0"
+    "@symbo.ls/atoms" "^2.11.455"
+    "@symbo.ls/emotion" "^2.11.453"
+    "@symbo.ls/scratch" "^2.11.453"
+
+css-in-props@^2.11.457:
+  version "2.11.457"
+  resolved "https://registry.yarnpkg.com/css-in-props/-/css-in-props-2.11.457.tgz#5ffff9030bab1b4dbb6ab2aa46c6c8ff67658863"
+  integrity sha512-36HuXqrvul22hLpFe/jA0oZmqjQyeT3U5yIDI0bsnQWNTT/IONHKRBomDVEZsFjcltklZHZThgzWk7rYaeBKyg==
   dependencies:
     "@domql/utils" "^2.5.0"
     "@symbo.ls/atoms" "^2.11.455"
@@ -3860,6 +3956,17 @@ domql@^2.5.0:
     "@domql/render" "^2.5.152"
     "@domql/state" "^2.5.152"
     "@domql/utils" "^2.5.152"
+
+domql@^2.5.155:
+  version "2.5.155"
+  resolved "https://registry.yarnpkg.com/domql/-/domql-2.5.155.tgz#9548d388b521bfbe0a91e8c4501b457a40cc2294"
+  integrity sha512-DKnWBNVg9tfr8Zo7PE8+ojJ/t2OWGyhwPWi1S5MtX3DrTUmlkL62su7YmerHslSlPCMEcGDvSxhE27G5wAGxqg==
+  dependencies:
+    "@domql/element" "^2.5.154"
+    "@domql/event" "^2.5.154"
+    "@domql/render" "^2.5.154"
+    "@domql/state" "^2.5.154"
+    "@domql/utils" "^2.5.154"
 
 domutils@^2.8.0:
   version "2.8.0"
@@ -7864,22 +7971,22 @@ smart-buffer@^4.2.0:
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.2.0.tgz#6e1d71fa4f18c05f7d0ff216dd16a481d0e8d9ae"
   integrity sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==
 
-smbls@^2.11.0:
-  version "2.11.455"
-  resolved "https://registry.yarnpkg.com/smbls/-/smbls-2.11.455.tgz#8fa8f30340b3c8294d60594aa5a51e1ab171f61a"
-  integrity sha512-hZtzg8XcFJaPr0kROxYseq/J6nIyUueNAnIOMDgVXu0dP6Gra4L1DQrpnGjUAlSiqhljE5cSehOVmndj+N7gKQ==
+smbls@^2.11.460:
+  version "2.11.460"
+  resolved "https://registry.yarnpkg.com/smbls/-/smbls-2.11.460.tgz#deb59329a2294dcbc8449ca533ec93728696514e"
+  integrity sha512-BNYSEibl2XTRklmYfroc1FMWv7VA3qMECZI03lQr2DUwqMe38E+7xjhX2hAUB5lE2fSjXMbVPX+1sUIWJxzXxg==
   dependencies:
-    "@symbo.ls/cli" "^2.11.455"
-    "@symbo.ls/create" "^2.11.455"
+    "@symbo.ls/cli" "^2.11.460"
+    "@symbo.ls/create" "^2.11.460"
     "@symbo.ls/default-config" "^2.11.453"
     "@symbo.ls/init" "^2.11.453"
     "@symbo.ls/scratch" "^2.11.453"
-    "@symbo.ls/sync" "^2.11.455"
+    "@symbo.ls/sync" "^2.11.460"
     "@symbo.ls/uikit" "^2.11.455"
     "@symbo.ls/utils" "^2.11.453"
     attrs-in-props "^2.11.455"
-    css-in-props "^2.11.455"
-    domql "^2.5.0"
+    css-in-props "^2.11.457"
+    domql "^2.5.155"
 
 socket.io-adapter@~2.5.2:
   version "2.5.5"
