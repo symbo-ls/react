@@ -1,11 +1,11 @@
 {
   "name": "@symbo.ls/react-box",
-  "version": "2.13.4",
+  "version": "2.13.5",
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@symbo.ls/create": "^2.11.0",
-    "@symbo.ls/react-provider": "^2.13.4",
+    "@symbo.ls/react-provider": "^2.13.5",
     "css-in-props": "^2.11.0"
   },
   "peerDependencies": {
