@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "parcel example/index.html --port=8081 --no-cache",
-    "build:all": "lerna exec -- npx esbuild ./index.js --target=node16 --format=cjs --outdir=dist/cjs --loader:.js=jsx",
+    "build": "lerna exec -- npx esbuild ./index.js --target=node16 --format=cjs --outdir=dist/cjs --loader:.js=jsx",
     "clean": "yarn clean:dist; yarn clean:packages; yarn clean:modules; yarn clean:package-modules; yarn clean:generated",
     "clean:dist": "rm -rf ./dist ./.cache ./.parcel-cache",
     "clean:modules": "rm -rf node_modules yarn.lock package-lock.json lerna-debug.log yarn-error.log",
