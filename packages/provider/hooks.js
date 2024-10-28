@@ -113,7 +113,8 @@ export function useSymbols (props, ref, key) {
   const elem = checkIfSugar(props) ? { props, node } : { extend: props, node }
   const hasRefElem = ref.element || props?.__element
   const elemKey = key || `${Math.random()}`
-  const element = hasRefElem || DOM.create(elem, useRoot(), elemKey, { 
+  const domqlCreate = (DOM.default && DOM.default.create) || DOM.create
+  const element = hasRefElem || domqlCreate(elem, useRoot(), elemKey, { 
     onlyResolveExtends: true
   })
 
