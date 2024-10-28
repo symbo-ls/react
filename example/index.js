@@ -13,15 +13,15 @@ import { SymbolsProvider } from '@symbo.ls/react-provider'
 // import { ButtonTwo } from './DompilerButton2';
 // import { DropdownList } from './DompilerDropdown';
 // import { IconText } from './IconText';
-import { MyTry, Toko } from './MyTry'
+import { MyTry, Reuse, SmblsTestComp, Toko } from './MyComp'
 
 const container = document.getElementById('app')
 const root = createRoot(container)
 root.render(
   // <StrictMode>
   <SymbolsProvider>
-    <MyTry />
-    <Toko>yooo 111</Toko>
+    <SmblsTestComp />
+    <Reuse>yooo 111</Reuse>
     {/* <Flex flow="column" gap="A" boxSize="100%" flexAlign="center center"> */}
 
     {/* <Button icon="logo" theme="primary">Button</Button>
