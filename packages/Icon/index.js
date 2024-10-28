@@ -1,5 +1,6 @@
 'use strict'
 
+import React from 'react'
 import { Svg, Flex } from '@symbo.ls/react-atoms'
 import * as D from '@symbo.ls/icon'
 import { forwardRef } from 'react'

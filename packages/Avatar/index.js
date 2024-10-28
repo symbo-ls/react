@@ -1,8 +1,8 @@
 'use strict'
 
+import React from 'react'
 import * as D from '@symbo.ls/avatar'
 import { Img } from '@symbo.ls/react-atoms'
-
 import { forwardRef } from 'react'
 
 export const Avatar = forwardRef((props, ref) => {

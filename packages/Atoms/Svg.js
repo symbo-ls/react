@@ -1,5 +1,6 @@
 'use strict'
 
+import React from 'react'
 import { forwardRef } from 'react'
 import { Box } from '@symbo.ls/react-box'
 

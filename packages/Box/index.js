@@ -1,7 +1,7 @@
 'use strict '
 
-import { useSymbols, useRoot, useSymbolsContext, pairStateUpdates } from '@symbo.ls/react-provider'
 import React, { forwardRef } from 'react'
+import { useSymbols, useRoot, useSymbolsContext, pairStateUpdates } from '@symbo.ls/react-provider'
 import { jsx } from 'react/jsx-runtime'
 
 export const Box = forwardRef((...args) => {

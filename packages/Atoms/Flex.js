@@ -1,5 +1,6 @@
 'use strict'
 
+import React from 'react'
 import { Flex as smbmsFlex } from '@symbo.ls/atoms'
 import { Box } from '@symbo.ls/react-box'
 import { transformEmotion, transformClassname } from 'css-in-props'
