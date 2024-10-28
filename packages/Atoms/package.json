@@ -1,6 +1,6 @@
 {
   "name": "@symbo.ls/react-atoms",
-  "version": "2.13.7",
+  "version": "2.13.8",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@symbo.ls/atoms": "^2.11.0",
