@@ -1,11 +1,11 @@
 {
   "name": "@symbo.ls/react-avatar",
-  "version": "2.13.6",
+  "version": "2.13.7",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@domql/utils": "^2.5.0",
     "@symbo.ls/icon": "^2.11.0",
-    "@symbo.ls/react-atoms": "^2.13.6"
+    "@symbo.ls/react-atoms": "^2.13.7"
   },
   "peerDependencies": {
     "react": "^18.0.0",
