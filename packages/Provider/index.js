@@ -16,11 +16,13 @@ export const SymbolsProvider = (props) => {
   const { appKey, editor } = ctx
   const key = (SYMBOLSRC || ctx || {}).key
 
-  const initialDesignSystem = ctx.designSystem || DEFAULT_CONFIG
+  const initialDesignSystem = props.designSystem || ctx.designSystem || DEFAULT_CONFIG
 
   if (ctx.globalTheme) initialDesignSystem.globalTheme = ctx.globalTheme
 
+  console.log(initialDesignSystem)
   const scratchInit = init(initialDesignSystem)
+  console.log(scratchInit)
   const [designSystem, setDesignSystem] = useState(scratchInit)
   const [state, setState] = useState(ctx.state)
   const [globalTheme, setGlobalTheme] = useState(designSystem.globalTheme)

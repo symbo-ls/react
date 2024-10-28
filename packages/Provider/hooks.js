@@ -73,7 +73,12 @@ export function useRoot () {
     data: {
       listeners: []
     },
-    context: useSymbolsContext()
+    context: {
+      ...useSymbolsContext(),
+      initOptions: {
+        preventEmotion: true
+      }
+    }
   }, { key: 'react-root', state: useGlobalState()[0] }))
 }
 

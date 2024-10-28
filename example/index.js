@@ -15,11 +15,22 @@ import { SymbolsProvider } from '@symbo.ls/react-provider'
 // import { IconText } from './IconText';
 import { MyTry, Reuse, SmblsTestComp, Toko } from './MyComp'
 
+const designSystem = {
+  THEME: {
+    document: {
+      '@dark': {
+        background: '#123'
+      }
+    }
+  }
+}
+
 const container = document.getElementById('app')
 const root = createRoot(container)
+console.log(designSystem)
 root.render(
   // <StrictMode>
-  <SymbolsProvider>
+  <SymbolsProvider designSystem={designSystem}>
     <SmblsTestComp />
     <Reuse>yooo 111</Reuse>
     {/* <Flex flow="column" gap="A" boxSize="100%" flexAlign="center center"> */}
