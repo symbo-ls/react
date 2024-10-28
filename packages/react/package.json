@@ -1,15 +1,15 @@
 {
   "name": "@symbo.ls/react",
-  "version": "2.13.3",
+  "version": "2.13.4",
   "license": "MIT",
   "gitHead": "f05f066d450939bd46baf3ddda331a5790518873",
   "dependencies": {
-    "@symbo.ls/react-atoms": "^2.13.3",
-    "@symbo.ls/react-avatar": "^2.13.3",
-    "@symbo.ls/react-box": "^2.13.3",
-    "@symbo.ls/react-button": "^2.13.3",
-    "@symbo.ls/react-icon": "^2.13.3",
-    "@symbo.ls/react-provider": "^2.13.3",
+    "@symbo.ls/react-atoms": "^2.13.4",
+    "@symbo.ls/react-avatar": "^2.13.4",
+    "@symbo.ls/react-box": "^2.13.4",
+    "@symbo.ls/react-button": "^2.13.4",
+    "@symbo.ls/react-icon": "^2.13.4",
+    "@symbo.ls/react-provider": "^2.13.4",
     "smbls": "^2.11.0"
   },
   "peerDependencies": {

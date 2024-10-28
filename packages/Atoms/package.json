@@ -1,10 +1,10 @@
 {
   "name": "@symbo.ls/react-atoms",
-  "version": "2.13.3",
+  "version": "2.13.4",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@symbo.ls/atoms": "^2.11.0",
-    "@symbo.ls/react-box": "^2.13.3",
+    "@symbo.ls/react-box": "^2.13.4",
     "css-in-props": "^2.11.0"
   },
   "peerDependencies": {
