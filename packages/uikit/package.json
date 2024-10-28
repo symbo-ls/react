@@ -1,14 +1,14 @@
 {
   "name": "@symbo.ls/react-uikit",
-  "version": "2.13.9",
+  "version": "2.13.10",
   "license": "MIT",
   "gitHead": "f05f066d450939bd46baf3ddda331a5790518873",
   "dependencies": {
-    "@symbo.ls/react-atoms": "^2.13.9",
-    "@symbo.ls/react-avatar": "^2.13.9",
-    "@symbo.ls/react-box": "^2.13.9",
-    "@symbo.ls/react-button": "^2.13.9",
-    "@symbo.ls/react-icon": "^2.13.9",
+    "@symbo.ls/react-atoms": "^2.13.10",
+    "@symbo.ls/react-avatar": "^2.13.10",
+    "@symbo.ls/react-box": "^2.13.10",
+    "@symbo.ls/react-button": "^2.13.10",
+    "@symbo.ls/react-icon": "^2.13.10",
     "smbls": "^2.11.460"
   },
   "peerDependencies": {
