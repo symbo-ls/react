@@ -1,11 +1,11 @@
 {
   "name": "@symbo.ls/react",
-  "version": "2.13.12",
+  "version": "2.13.13",
   "license": "MIT",
   "gitHead": "f05f066d450939bd46baf3ddda331a5790518873",
   "dependencies": {
-    "@symbo.ls/react-provider": "^2.13.11",
-    "@symbo.ls/react-uikit": "^2.13.12",
+    "@symbo.ls/react-provider": "^2.13.13",
+    "@symbo.ls/react-uikit": "^2.13.13",
     "smbls": "^2.11.466"
   },
   "peerDependencies": {
