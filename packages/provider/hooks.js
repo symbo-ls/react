@@ -2,7 +2,7 @@
 
 import React, { useContext, useRef } from 'react'
 import DOM from 'domql'
-import { createSkeleton, checkIfSugar } from 'smbls'
+import { createSkeleton, checkIfSugar, deepCloneWithExtend } from 'smbls'
 import { transformEmotion, extractCSSfromProps } from 'css-in-props'
 import { Box } from '@symbo.ls/react-box'
 import { Icon } from '@symbo.ls/react-icon'
@@ -114,7 +114,7 @@ export function useSymbols (props, ref, key) {
   const hasRefElem = ref.element || props?.__element
   const elemKey = key || `${Math.random()}`
   const domqlCreate = (DOM.default && DOM.default.create) || DOM.create
-  const element = hasRefElem || domqlCreate(elem, useRoot(), elemKey, { 
+  const element = hasRefElem || domqlCreate(deepCloneWithExtend(elem), useRoot(), elemKey, { 
     onlyResolveExtends: true
   })
 
