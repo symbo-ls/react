@@ -4,9 +4,9 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@symbo.ls/create": "^2.11.0",
+    "@symbo.ls/create": "^2.11.469",
     "@symbo.ls/react-provider": "^2.13.13",
-    "css-in-props": "^2.11.457"
+    "css-in-props": "^2.11.469"
   },
   "peerDependencies": {
     "react": "^18.0.0",

@@ -9,7 +9,7 @@
     "@symbo.ls/react-box": "^2.13.13",
     "@symbo.ls/react-button": "^2.13.10",
     "@symbo.ls/react-icon": "^2.13.13",
-    "smbls": "^2.11.466"
+    "smbls": "^2.11.469"
   },
   "peerDependencies": {
     "react": "^18.2.0",

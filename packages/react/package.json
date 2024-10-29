@@ -6,7 +6,7 @@
   "dependencies": {
     "@symbo.ls/react-provider": "^2.13.13",
     "@symbo.ls/react-uikit": "^2.13.13",
-    "smbls": "^2.11.466"
+    "smbls": "^2.11.469"
   },
   "peerDependencies": {
     "react": "^18.2.0",
