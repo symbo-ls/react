@@ -18,7 +18,7 @@
     "domql": "^2.5.158",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "smbls": "^2.11.465"
+    "smbls": "^2.11.466"
   },
   "devDependencies": {
     "@babel/core": "^7.12.0",
