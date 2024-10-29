@@ -93,7 +93,7 @@ export function applyChildren (element, reactElem) {
   const { text: propText } = props
   const childElems = getCapitalCaseKeys(element)
   text = text || propText
-  return childElems.map(k => {
+  return childElems.map((k, i) => {
     const childElem = element[k]
     const childProps = childElem.props
     const key = k || childElem.key
@@ -102,7 +102,7 @@ export function applyChildren (element, reactElem) {
     delete reactElem[key]
     if (childElem?.if?.(childElem, childElem.state, childElem.context)) return
     const Base = childProps.spriteId ? Icon : childProps.avatarType ? Avatar : Box
-    return <Base ref={ref} key={key} />
+    return <Base ref={ref} key={key || i} />
   }).concat(props.children).concat([text]).filter(v => v)
 }
 
