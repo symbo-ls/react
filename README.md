@@ -1,5 +1,5 @@
 # Symbols React
-React hooks to use smbls
+React hooks to use [smbls](https://github.com/symbo-ls/smbls)
 
 ### Creating component and reusing
 
