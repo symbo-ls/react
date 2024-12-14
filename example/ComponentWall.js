@@ -4,7 +4,7 @@ import { SymbolsProvider } from "@symbo.ls/react";
 import { Brick, BrickTitle } from './Brick'
 import image from './test-img.jpg'
 
-import * as uikit from './uikit'
+import * as uikit from '../packages/generated'
 
 export default function ComponentWall(props) {
   // console.log("uikit:", uikit)
@@ -173,20 +173,12 @@ export default function ComponentWall(props) {
           <uikit.IconTab />
         </Brick>
 
-        <Brick title={"TitleParagraphWithButton"}>
-          <uikit.TitleParagraphWithButton />
-        </Brick>
-
         <Brick title={"SuccessIndicator"}>
           <uikit.SuccessIndicator />
         </Brick>
 
         <Brick title={"UploadImage"}>
           <uikit.UploadImage />
-        </Brick>
-
-        <Brick title={"UploadButtonWithIcon"}>
-          <uikit.UploadButtonWithIcon />
         </Brick>
 
         <Brick title={"UploadButton"}>
@@ -216,29 +208,29 @@ export default function ComponentWall(props) {
           <uikit.Message />
         </Brick>
 
-        <Brick gridColumnStart="span 3" title={"UploadLabel2"}>
+        {/* <Brick gridColumnStart="span 3" title={"UploadLabel2"}>
           <uikit.UploadLabel2 />
-        </Brick>
+        </Brick> */}
 
-        <Brick gridColumnStart="span 3" title={"UploadModal"}>
+        {/* <Brick gridColumnStart="span 3" title={"UploadModal"}>
           <uikit.UploadModal />
-        </Brick>
+        </Brick> */}
 
-        <Brick gridColumnStart="span 3" title={"UploadModal3"}>
+        {/* <Brick gridColumnStart="span 3" title={"UploadModal3"}>
           <uikit.UploadModal3 />
-        </Brick>
+        </Brick> */}
 
-        <Brick gridColumnStart="span 3" title={"UploadLabel"}>
+        {/* <Brick gridColumnStart="span 3" title={"UploadLabel"}>
           <uikit.UploadLabel />
-        </Brick>
+        </Brick> */}
 
-        <Brick gridColumnStart="span 3" title={"CompleteProcess"}>
+        {/* <Brick gridColumnStart="span 3" title={"CompleteProcess"}>
           <uikit.CompleteProcess />
         </Brick>
 
         <Brick gridColumnStart="span 3" title={"UploadModal2"}>
           <uikit.UploadModal2 />
-        </Brick>
+        </Brick> */}
 
         <Brick gridColumnStart="span 3" title={"UploadImage"}>
           <uikit.UploadImage />
@@ -304,17 +296,17 @@ export default function ComponentWall(props) {
           <uikit.UploadedProcess4 />
         </Brick>
 
-        <Brick gridColumnStart="span 6" title={"UploadModal4"}>
+        {/* <Brick gridColumnStart="span 6" title={"UploadModal4"}>
           <uikit.UploadModal4 />
-        </Brick>
+        </Brick> */}
         
         <Brick title={"Checkbox"}>
           <uikit.Checkbox  />
         </Brick>
         
-        <Brick title={"Radio"}>
+        {/* <Brick title={"Radio"}>
           <uikit.Radio />
-        </Brick>
+        </Brick> */}
         
         <Brick title={"Toggle"}>
           <uikit.Toggle />
@@ -340,28 +332,8 @@ export default function ComponentWall(props) {
           <uikit.FieldTemplate />
         </Brick>
         
-        <Brick gridColumnStart="span 3" title={"CommonField"}>
-          <uikit.CommonField />
-        </Brick>
-        
-        <Brick gridColumnStart="span 3" title={"CommonFieldTemplate"}>
-          <uikit.CommonFieldTemplate />
-        </Brick>
-        
-        <Brick gridColumnStart="span 3" title={"Textarea"}>
-          <uikit.Textarea />
-        </Brick>
-        
         <Brick gridColumnStart="span 3" title={"TextareaWithButton"}>
           <uikit.TextareaWithButton />
-        </Brick>
-        
-        {/* <Brick title={"NumberField"}>
-          <uikit.NumberField />
-        </Brick> */}
-        
-        <Brick title={"ParagraphButton"}>
-          <uikit.ParagraphButton />
         </Brick>
         
         {/* <Brick gridColumnStart="span 3" title={"VerificationCode"}>
@@ -372,17 +344,17 @@ export default function ComponentWall(props) {
           <uikit.ResetPassword />
         </Brick> */}
         
-        <Brick gridColumnStart="span 6" title={"ContactForm"}>
+        {/* <Brick gridColumnStart="span 6" title={"ContactForm"}>
           <uikit.ContactForm />
-        </Brick>
+        </Brick> */}
         
-        <Brick gridColumnStart="span 6" title={"SignUp"}>
+        {/* <Brick gridColumnStart="span 6" title={"SignUp"}>
           <uikit.SignUp />
-        </Brick>
+        </Brick> */}
         
-        <Brick gridColumnStart="span 6" title={"LogIn"}>
+        {/* <Brick gridColumnStart="span 6" title={"LogIn"}>
           <uikit.LogIn />
-        </Brick>
+        </Brick> */}
         
         <Brick title={"DoubleHr"}>
           <uikit.DoubleHr />
@@ -391,10 +363,6 @@ export default function ComponentWall(props) {
         <Brick title={"SocialLink"}>
           <uikit.SocialLink />
         </Brick>
-        
-        {/* <Brick title={"SlideTabs"}>
-          <uikit.SlideTabs />
-        </Brick> */}
         
         <Brick title={"Search"}>
           <uikit.Search />
@@ -408,10 +376,6 @@ export default function ComponentWall(props) {
           <uikit.DropDownButton />
         </Brick>
         
-        <Brick title={"SearchWithDropDownButton"}>
-          <uikit.SearchWithDropDownButton />
-        </Brick>
-        
         <Brick title={"ListTemplate"}>
           <uikit.ListTemplate />
         </Brick>
@@ -420,21 +384,21 @@ export default function ComponentWall(props) {
           <uikit.ListWithTitleTemplate />
         </Brick>
         
-        {/* <Brick title={"GroupListTemplate"}>
+        <Brick title={"GroupListTemplate"}>
           <uikit.GroupListTemplate />
-        </Brick> */}
+        </Brick>
         
-        {/* <Brick title={"GroupListWithSearchTemplate"}>
+        <Brick title={"GroupListWithSearchTemplate"}>
           <uikit.GroupListWithSearchTemplate />
-        </Brick> */}
+        </Brick>
         
         <Brick title={"CheckIndicator"}>
           <uikit.CheckIndicator />
         </Brick>
         
-        {/* <Brick title={"CheckIndicatorWithLabel"}>
+        <Brick title={"CheckIndicatorWithLabel"}>
           <uikit.CheckIndicatorWithLabel />
-        </Brick> */}
+        </Brick>
         
         <Brick title={"CheckStep"}>
           <uikit.CheckStep />
@@ -464,17 +428,17 @@ export default function ComponentWall(props) {
           <uikit.LineSteps />
         </Brick>
         
-        <Brick title={"LineStepsWithTitleParagraph"}>
+        {/* <Brick title={"LineStepsWithTitleParagraph"}>
           <uikit.LineStepsWithTitleParagraph />
-        </Brick>
+        </Brick> */}
         
         <Brick title={"UnitValueWithLabel"}>
           <uikit.UnitValueWithLabel />
         </Brick>
         
-        <Brick gridColumnStart="span 6" title={"StepCard"}>
+        {/* <Brick gridColumnStart="span 6" title={"StepCard"}>
           <uikit.StepCard />
-        </Brick>
+        </Brick> */}
         
         <Brick gridColumnStart="span 6" title={"BalanceCard"}>
           <uikit.BalanceCard />
@@ -484,13 +448,13 @@ export default function ComponentWall(props) {
           <uikit.ConvertCard />
         </Brick>
         
-        <Brick gridColumnStart="span 6" title={"CurrencyConvert"}>
+        {/* <Brick gridColumnStart="span 6" title={"CurrencyConvert"}>
           <uikit.CurrencyConvert />
-        </Brick>
+        </Brick> */}
         
-        <Brick gridColumnStart="span 6" title={"Pricing"}>
+        {/* <Brick gridColumnStart="span 6" title={"Pricing"}>
           <uikit.Pricing />
-        </Brick>
+        </Brick> */}
         
         <Brick title={"UnitValueWithTitle"}>
           <uikit.UnitValueWithTitle />
@@ -522,9 +486,9 @@ export default function ComponentWall(props) {
           <uikit.CheckIndicatorWithLabel />
         </Brick>
 
-        {/* <Brick title={"Checkbox"}>
+        <Brick title={"Checkbox"}>
           <uikit.Checkbox theme={"primary"} />
-        </Brick> */}
+        </Brick>
 
         <Brick title={"Modal"}>
           <uikit.Modal />
@@ -604,9 +568,9 @@ export default function ComponentWall(props) {
           <uikit.SearchWithButton />
         </Brick>
 
-        <Brick title={"SearchWithDropDownButton"}>
+        {/* <Brick title={"SearchWithDropDownButton"}>
           <uikit.SearchWithDropDownButton />
-        </Brick>
+        </Brick> */}
 
         <Brick title={"PlusMinusButtons"}>
           <uikit.PlusMinusButtons />

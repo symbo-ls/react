@@ -1,0 +1,21 @@
+{
+  "name": "@symbo.ls/react-button",
+  "version": "2.12.0",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/css": "^11.11.0",
+    "@emotion/react": "^11.11.0",
+    "@symbo.ls/atoms": "latest",
+    "@symbo.ls/create": "latest",
+    "@symbo.ls/icon": "latest",
+    "@symbo.ls/react": "latest",
+    "css-in-props": "latest"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "main": "index.js",
+  "source": "index.js",
+  "gitHead": "fe0a7973380f6681850da574f434574a654d40bf"
+}
