@@ -1,7 +1,7 @@
 # Symbols React
 React hooks to use smbls
 
-```
+```javascript
 import * as React from 'react'
 import { jsx } from 'react/jsx-runtime'
 import { Box } from '@symbo.ls/react-box'
