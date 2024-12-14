@@ -2,7 +2,6 @@ import * as React from 'react'
 import { jsx } from 'react/jsx-runtime'
 import { Box } from '@symbo.ls/react-box'
 import { useSymbolsContext } from '@symbo.ls/react-provider'
-import { User } from '@symbo.ls/user'
 
 export const SmblsTestComp = React.forwardRef((...args) => {
   // Clear cache if needed (moved outside component logic)
