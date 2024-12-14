@@ -1,9 +1,9 @@
 {
+  "name": "smbls-react",
   "private": true,
   "scripts": {
     "start": "parcel example/index.html --port=8081 --no-cache",
-    "convert": "bash convert.sh",
-    "convert:buildscript": "npx esbuild convert.js --outfile=./dist/convert/convert.cjs --bundle --platform=node --target=es2020 --format=cjs && rm -rf example/uikit/ && node ./dist/convert/convert.cjs",
+    "build": "lerna exec -- npx esbuild ./index.js --target=node16 --format=cjs --outdir=dist/cjs --loader:.js=jsx",
     "clean": "yarn clean:dist; yarn clean:packages; yarn clean:modules; yarn clean:package-modules; yarn clean:generated",
     "clean:dist": "rm -rf ./dist ./.cache ./.parcel-cache",
     "clean:modules": "rm -rf node_modules yarn.lock package-lock.json lerna-debug.log yarn-error.log",
@@ -14,27 +14,48 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
-    "@symbo.ls/cli": "latest",
-    "@symbo.ls/convert": "latest",
-    "@symbo.ls/create": "latest",
-    "@symbo.ls/react": "latest",
+    "@symbo.ls/cli": "^2.11.469",
+    "domql": "^2.5.158",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "smbls": "^2.11.469"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.22.3",
-    "@parcel/transformer-raw": "^2.9.3",
     "@babel/core": "^7.12.0",
+    "@babel/eslint-parser": "^7.25.9",
+    "@babel/preset-react": "^7.22.3",
     "@emotion/babel-plugin": "^11.11.0",
     "@parcel/transformer-inline-string": "^2.9.3",
-    "globusa": "latest",
-    "kalduna": "latest",
+    "@parcel/transformer-raw": "^2.9.3",
     "buffer": "^5.5.0||^6.0.0",
+    "eslint": "^9.13.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "lerna": "^8.1.8",
     "parcel": "^2.10.1",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "standard": "^17.1.2"
   },
-  "workspaces": [
-    "packages/generated/",
-    "packages/generated/*"
-  ]
+  "standard": {
+    "parser": "@babel/eslint-parser",
+    "ignore": [
+      "examples/*.js",
+      "**/test/*.js",
+      "*.jsx"
+    ],
+    "env": [
+      "jest"
+    ]
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "src/*"
+    ],
+    "nohoist": [
+      "@symbo.ls/react",
+      "@symbo.ls/react-box",
+      "@symbo.ls/react-provider"
+    ]
+  }
 }
