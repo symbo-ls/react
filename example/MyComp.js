@@ -4,22 +4,6 @@ import { Box } from '@symbo.ls/react-box'
 import { useSymbolsContext } from '@symbo.ls/react-provider'
 import { User } from '@symbo.ls/user'
 
-export const Main = () => {
-  const name = 'toko'
-  const [svtate, setSvtate] = React.useState()
-  return (
-    <div className='primary pl6' onClick={e => setSvtate}>{svtate}</div>
-  )
-}
-
-export const Svinchy = () => {
-  const name = 'toko'
-  const [svtate, setSvtate] = React.useState()
-  return (
-    <Main onClick={e => setSvtate}>{svtate}</Main>
-  )
-}
-
 export const SmblsTestComp = React.forwardRef((...args) => {
   // Clear cache if needed (moved outside component logic)
   const clearCache = async () => {
