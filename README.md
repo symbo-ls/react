@@ -1,6 +1,8 @@
 # Symbols React
 React hooks to use smbls
 
+### Creating component and reusing
+
 ```javascript
 import * as React from 'react'
 import { jsx } from 'react/jsx-runtime'
@@ -71,7 +73,7 @@ export const Reuse = () => {
     <Box extends="Button" text="123 yoyo" />
     <SmblsTestComp
       theme="secondary"
-      text="yo anything"
+      text="just text"
       H1={{ text: 'yo!'}}
       Yo={{ hide: true }}
       Notification={{ theme: 'document', Flex: { Title: { text: 'My name is!'  } }}}
@@ -79,4 +81,20 @@ export const Reuse = () => {
       >something</SmblsTestComp>
   </>
 }
+```
+
+
+### Context provider to init Symbols
+```javascript
+import React from 'react'
+import { render } from 'react-dom'
+import { SymbolsProvider } from '@symbo.ls/react-provider'
+import { SmblsTestComp } from './MyComp'
+
+render(
+  <SymbolsProvider>
+    <SmblsTestComp />
+  </SymbolsProvider>,
+  document.getElementById('root')
+)
 ```
