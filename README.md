@@ -6,43 +6,15 @@ import * as React from 'react'
 import { jsx } from 'react/jsx-runtime'
 import { Box } from '@symbo.ls/react-box'
 import { useSymbolsContext } from '@symbo.ls/react-provider'
-import { User } from '@symbo.ls/user'
 
 export const SmblsTestComp = React.forwardRef((...args) => {
-  // Clear cache if needed (moved outside component logic)
-  const clearCache = async () => {
-    const cacheNames = await caches.keys()
-    await Promise.all(cacheNames.map(name => caches.delete(name)))
-  }
-  clearCache().catch(console.error)
-
   const [props, ref, key] = args
 
   const orig = {
-    extend: ['Flex', {
-      props
-    }],
-  
-    props: {
-      padding: 'C1',
-      align: 'start center',
-      flow: 'y',
-      gap: 'C1',
-  
-      // onStateUpdate: (el, s) => {
-      //   console.log('onStateUpdate domql')
-      //   console.log(s)
-      // }
-    },
-  
-    H1: {
-      text: 'React Demo'
-    },
-  
-    Yo: {
-      text: (el, s) => 'My name is ' + s.name
-    },
-  
+    extend: ['Flex'],
+
+    props,
+
     Notification: {
       IconText: {
         icon: 'smile'
@@ -60,19 +32,14 @@ export const SmblsTestComp = React.forwardRef((...args) => {
       }
     },
   
-    Box: {
-      extend: [
-        'Flex',
-      ],
-      props: {
-        align: 'flex-start',
-        gap: 'Y2',
-        '@tabletS': {
-          fontSize: 'Z2',
-        },
-        '@mobileS': {
-          fontSize: 'Z1',
-        },
+    Flex: {
+      align: 'flex-start',
+      gap: 'Y2',
+      '@tabletS': {
+        fontSize: 'Z2',
+      },
+      '@mobileS': {
+        fontSize: 'Z1',
       },
       Avatar: {},
       P: {
