@@ -7050,9 +7050,7 @@ pacote@^18.0.0, pacote@^18.0.6:
     tar "^6.1.11"
 
 parcel@^2.10.1:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/parcel/-/parcel-2.12.0.tgz#60529c268c2ce0754b225af835f1519da1364298"
-  integrity sha512-W+gxAq7aQ9dJIg/XLKGcRT0cvnStFAQHPaI0pvD0U2l6IVLueUAm3nwN7lkY62zZNmlvNx6jNtE4wlbS+CyqSg==
+  version "2.16.4"
   dependencies:
     "@parcel/config-default" "2.12.0"
     "@parcel/core" "2.12.0"
